@@ -37,7 +37,7 @@
 
     --primary-light: #6ddba9;
     --primary-light-medium: #36c689;
-    --primary-lighter: rgb(223, 248, 237);
+    --primary-lighter: #dff8ed;
 
     --primary-foreground: #fefbf8;
 
@@ -56,6 +56,7 @@
 
     --gray-light: #bdc0c2;
     --gray-medium: #5a6472;
+    --gray-dark: #3e434b;
 
     --border: #eae4da;
     --border-light: rgba(204, 178, 129, 0.251);
@@ -74,7 +75,7 @@
 @layer utilities {
   .hairline {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    background: linear-gradient(90deg, transparent, var(--gray-medium), transparent);
   }
 
   .shadow-soft {
@@ -127,7 +128,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--primary-light-medium);
+    background: var(--primary-light);
     border-radius: 999px;
   }
 

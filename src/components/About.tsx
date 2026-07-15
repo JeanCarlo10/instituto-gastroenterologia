@@ -1,40 +1,176 @@
+// import { motion } from "framer-motion";
+// import { SlideUp } from "@/animations";
+// import About01 from "@/assets/About01.jpg";
+// import About03 from "@/assets/About03.jpg";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+
+// const images = [{ backgroundImage: About01 }, { backgroundImage: About03 }];
+
+// const About = () => {
+//   return (
+//     <section id="about" className="py-20 bg-[#9bd5bf]/15">
+//       <div className="container mx-auto px-6 md:px-8">
+//         <div className="flex flex-col-reverse lg:flex-row items-center gap-20">
+//           {/* TEXTO */}
+//           <div className="w-full lg:w-[45%]">
+//             <motion.span
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.6 }}
+//               className="text-xs uppercase tracking-[0.35em] text-(--gray-medium)"
+//             >
+//               Sobre a clínica
+//             </motion.span>
+
+//             <motion.h2
+//               initial={{ opacity: 0, y: 30 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.8 }}
+//               className="mt-5 mb-8 font-display text-4xl md:text-5xl lg:text-6xl text-(--gray-medium) font-bold"
+//             >
+//               IGC
+//             </motion.h2>
+
+//             <motion.div
+//               variants={SlideUp(0.4)}
+//               initial="initial"
+//               whileInView="animate"
+//               viewport={{ once: true }}
+//               className="hairline mt-8 mb-8"
+//             ></motion.div>
+
+//             <motion.p
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.7 }}
+//               className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
+//             >
+//               Fundada em 2004, em Foz do Iguaçu, a Clínica IGC nasceu da união
+//               de um grupo de médicos dedicados ao cuidado especializado das
+//               doenças do aparelho digestivo. Inicialmente chamada de Instituto
+//               de Gastroenterologia e Cirurgia de Foz do Iguaçu, a clínica foi
+//               criada com o propósito de oferecer atendimento de excelência em
+//               gastroenterologia e cirurgia digestiva, unindo tecnologia,
+//               precisão diagnóstica e experiência médica.
+//             </motion.p>
+
+//             <motion.p
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.7, delay: 0.2 }}
+//               className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
+//             >
+//               Desde sua origem, o IGC se tornou referência no tratamento de
+//               gastrite, úlceras, hérnias, cálculos na vesícula, refluxo,
+//               obesidade, cirurgias bariátricas, colocação de balão intra
+//               gástrico e diversas outras doenças que acometem o sistema
+//               gastrointestinal. Com o passar dos anos, a clínica ampliou seus
+//               serviços e modernizou sua estrutura com aparelhos de última
+//               geração, mantendo sempre o foco na precisão diagnóstica e na
+//               realização de procedimentos avançados, como endoscopia,
+//               colonoscopia, ecografia, manometria e phmetria esofágica, teste
+//               respiratório para diagnostico de super crescimento bacterianos e
+//               exames funcionais do aparelho digestivo.
+//             </motion.p>
+
+//             <motion.p
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.7, delay: 0.4 }}
+//               className="text-lg leading-relaxed text-(--muted-foreground)"
+//             >
+//               Atualmente, a Clínica IGC atua no diagnóstico e tratamento de
+//               doenças do aparelho digestivo, oferecendo um atendimento
+//               humanizado, seguro e baseado em protocolos
+//               atualizados.(Gastroenterologia Avançada). Nossa equipe médica é
+//               formada por profissionais altamente qualificados e comprometidos
+//               com a saúde e o bem-estar dos pacientes.
+//             </motion.p>
+//           </div>
+
+//           <div className="w-full lg:w-[55%] flex justify-center">
+//             <Swiper
+//               modules={[Autoplay, EffectFade, Pagination]}
+//               effect="fade"
+//               loop={true}
+//               pagination={{ clickable: true }}
+//               grabCursor={true}
+//               autoplay={{ delay: 3500, disableOnInteraction: false }}
+//               className="w-full max-w-[700px] rounded-4xl"
+//             >
+//               {images.map((item, index) => (
+//                 <SwiperSlide key={index}>
+//                   <div className="relative">
+//                     <img
+//                       src={item.backgroundImage}
+//                       alt={`Clínica ${index + 1}`}
+//                       className="w-full h-[750px] object-cover shadow-[0_20px_60px_rgba(0,0,0,.15)]"
+//                     />
+//                   </div>
+//                 </SwiperSlide>
+//               ))}
+//             </Swiper>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import Image from "@/assets/About4.png";
+import { Award, Building2, ShieldCheck, HeartHandshake } from "lucide-react";
+import AboutImage from "@/assets/About01.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-(--gold-soft)/20">
-      <div className="container mx-auto px-6 md:px-8">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-20">
-          {/* TEXTO */}
-          <div className="w-full lg:w-[45%]">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
+    <section
+      id="about"
+      className="relative overflow-hidden py-28 bg-[#9bd5bf]/10"
+    >
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-20 items-center">
+          <div className="lg:col-span-6">
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-xs uppercase tracking-[0.35em] text-(--gold-deep)"
+              className="inline-flex items-center gap-3 rounded-full border border-(--primary)/20 bg-(--primary)/5 px-5 py-2"
             >
-              Sobre
-            </motion.span>
+              <Building2 size={18} className="text-(--primary)" />
+
+              <span className="text-sm font-medium">
+                Conheça nossa história
+              </span>
+            </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="mt-5 mb-8 font-display text-4xl md:text-5xl lg:text-6xl text-(--foreground)"
-            >
-              Vanessa Ferraz
-            </motion.h2>
-
-            <motion.div
-              variants={SlideUp(0.4)}
+              variants={SlideUp(0.15)}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="hairline mt-8 mb-8"
+              className="mt-8 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-(--gray-dark)"
+            >
+              Mais de
+              <span className="text-(--primary)"> 20 anos </span>
+              transformando a saúde digestiva
+            </motion.h2>
+
+            <motion.div
+              variants={SlideUp(0.3)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="hairline mt-8 mb-8 w-[35%]"
             ></motion.div>
 
             <motion.p
@@ -44,10 +180,13 @@ const About = () => {
               transition={{ duration: 0.7 }}
               className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
             >
-              Vanessa Ferraz atua na área do Direito Previdenciário com o
-              propósito de garantir que cada cliente tenha acesso aos benefícios
-              e direitos assegurados pela legislação, conduzindo cada caso com
-              responsabilidade, clareza e atenção individualizada.
+              Fundada em 2004, em Foz do Iguaçu, a Clínica IGC nasceu da união
+              de um grupo de médicos dedicados ao cuidado especializado das
+              doenças do aparelho digestivo. Inicialmente chamada de Instituto
+              de Gastroenterologia e Cirurgia de Foz do Iguaçu, a clínica foi
+              criada com o propósito de oferecer atendimento de excelência em
+              gastroenterologia e cirurgia digestiva, unindo tecnologia,
+              precisão diagnóstica e experiência médica.
             </motion.p>
 
             <motion.p
@@ -55,34 +194,132 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
+            >
+              Desde sua origem, o IGC se tornou referência no tratamento de
+              gastrite, úlceras, hérnias, cálculos na vesícula, refluxo,
+              obesidade, cirurgias bariátricas, colocação de balão intra
+              gástrico e diversas outras doenças que acometem o sistema
+              gastrointestinal. Com o passar dos anos, a clínica ampliou seus
+              serviços e modernizou sua estrutura com aparelhos de última
+              geração, mantendo sempre o foco na precisão diagnóstica e na
+              realização de procedimentos avançados, como endoscopia,
+              colonoscopia, ecografia, manometria e phmetria esofágica, teste
+              respiratório para diagnostico de super crescimento bacterianos e
+              exames funcionais do aparelho digestivo.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               className="text-lg leading-relaxed text-(--muted-foreground)"
             >
-              Com uma atuação pautada pela ética, transparência e compromisso,
-              oferece orientação jurídica estratégica para aposentadorias,
-              benefícios por incapacidade, pensões, revisões previdenciárias e
-              demais demandas relacionadas à proteção social e à segurança
-              jurídica de seus clientes.
+              Atualmente, a Clínica IGC atua no diagnóstico e tratamento de
+              doenças do aparelho digestivo, oferecendo um atendimento
+              humanizado, seguro e baseado em protocolos
+              atualizados.(Gastroenterologia Avançada). Nossa equipe médica é
+              formada por profissionais altamente qualificados e comprometidos
+              com a saúde e o bem-estar dos pacientes.
             </motion.p>
-          </div>
 
-          <div className="w-full lg:w-[55%] flex justify-center">
             <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              variants={SlideUp(0.75)}
+              initial="initial"
+              whileInView="animate"
               viewport={{ once: true }}
-              transition={{ duration: 0.9 }}
-              whileHover={{
-                scale: 1.02,
-              }}
-              className="relative"
+              className="mt-10 grid grid-cols-2 gap-5"
             >
-              <img
-                src={Image}
-                alt="Advogada"
-                className="w-full max-w-[650px] h-auto object-contain rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
-              />
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
+                  <Award size={26} className="text-(--primary)" />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg">Excelência Médica</h4>
+
+                  <p className="text-(--muted-foreground)">Desde 2004</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
+                  <ShieldCheck size={26} className="text-(--primary)" />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg">Segurança</h4>
+
+                  <p className="text-(--muted-foreground)">
+                    Protocolos atualizados
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
+                  <HeartHandshake size={26} className="text-(--primary)" />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg">Atendimento</h4>
+
+                  <p className="text-(--muted-foreground)">Humanizado</p>
+                </div>
+              </div>
             </motion.div>
           </div>
+
+          <motion.div
+            variants={SlideUp(0.35)}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="lg:col-span-6"
+          >
+            <div className="relative mx-auto max-w-[720px]">
+              <div
+                className="
+                absolute
+                -right-16
+                top-20
+                w-[420px]
+                h-[420px]
+                rounded-full
+                bg-(--primary)/15
+                blur-[110px]
+                "
+              />
+
+              {/* FOTO */}
+
+              <div
+                className="
+                relative
+                overflow-hidden
+                rounded-[42px]
+                bg-white
+                p-3
+                shadow-[0_35px_90px_rgba(0,0,0,.18)]
+                "
+              >
+                <img
+                  src={AboutImage}
+                  alt="Clínica IGC"
+                  className="
+                  h-[700px]
+                  w-full
+                  rounded-[32px]
+                  object-cover
+                  "
+                />
+              </div>
+
+              {/* Overlay  */}
+              <div className="absolute inset-0 rounded-[42px] bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
