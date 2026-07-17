@@ -8,7 +8,8 @@ const items = [
     author: "Marcelo Ramos",
   },
   {
-    quote: "A Dra. Vanessa Ferraz conduziu meu caso com segurança e muita atenção.",
+    quote:
+      "A Dra. Vanessa Ferraz conduziu meu caso com segurança e muita atenção.",
     author: "Andressa Soares",
   },
   {
@@ -39,9 +40,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="mt-4 mb-4 font-display text-3xl md:text-4xl lg:text-5xl text-(--foreground)"
           >
-            A confiança de quem já utilizou
-            <br className="hidden md:block" />
-            <span className="md:inline"> nossos serviços</span>
+            O que dizem nossos pacientes
           </motion.h2>
 
           <motion.div

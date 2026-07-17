@@ -127,13 +127,6 @@ const Footer = () => {
             </a>
 
             <a
-              href="#faq"
-              className="text-(--gold-soft) transition-all duration-300 hover:text-white hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_rgba(224,207,176,0.3)]"
-            >
-              FAQ
-            </a>
-
-            <a
               href="#contact"
               className="text-(--gold-soft) transition-all duration-300 hover:text-white hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_rgba(224,207,176,0.3)]"
             >
@@ -203,8 +196,8 @@ const Footer = () => {
           {/* Rodapé */}
           <div className="mt-14 pt-8 border-t border-white/10">
             <p className="text-white/40 text-sm">
-              © {new Date().getFullYear()} Vanessa Ferraz.
-              Todos os direitos reservados.
+              © {new Date().getFullYear()} Vanessa Ferraz. Todos os direitos
+              reservados.
             </p>
           </div>
         </div>

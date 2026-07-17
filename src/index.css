@@ -38,10 +38,11 @@
     --primary-light: #6ddba9;
     --primary-light-medium: #36c689;
     --primary-lighter: #dff8ed;
+    /* --primary-lighter: rgb(223, 248, 237); */
 
     --primary-foreground: #fefbf8;
 
-    --secondary: #fbf7f1;
+    --secondary: #f9fcfb;
     --secondary-foreground: #342c23;
 
     --muted: #f6f1e9;
@@ -75,7 +76,12 @@
 @layer utilities {
   .hairline {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gray-medium), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--gray-medium),
+      transparent
+    );
   }
 
   .shadow-soft {

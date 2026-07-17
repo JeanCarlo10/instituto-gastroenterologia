@@ -1,94 +1,79 @@
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import { ArrowRight } from "lucide-react";
 
-import AposentadoriaBg from "@/assets/Aposentadoria.jpg";
-import RevisaoBg from "@/assets/Revisao.jpg";
-import AverbacaoBg from "@/assets/Averbação.jpg";
-import AuxilioDoencaBg from "@/assets/Doença.jpg";
-import BeneficioAssistencialBg from "@/assets/Beneficio.png";
-import PensaoMorteBg from "@/assets/Pensao01.jpg";
-import FamiliaBg from "@/assets/Familia.png";
+import { Stethoscope, ScanLine, Activity, HeartPulse } from "lucide-react";
 
-const whatsappNumber = "45999999999";
+const procedures = [
+  {
+    title: "Endoscopia Digestiva",
+    description:
+      "Exame indicado para avaliação do esôfago, estômago e duodeno, permitindo diagnóstico preciso de diversas doenças.",
+    icon: Stethoscope,
+  },
 
-const services = [
   {
-    title: "Aposentadoria",
+    title: "Colonoscopia",
     description:
-      "Orientação jurídica para análise, planejamento e requerimento de aposentadoria, buscando mais segurança em cada etapa do processo.",
-    image: AposentadoriaBg,
-    imagePosition: "center",
-    whatsappMessage:
-      "Olá, gostaria de mais informações sobre orientação jurídica para aposentadoria.",
+      "Procedimento para investigação, prevenção e diagnóstico das doenças do intestino grosso.",
+    icon: ScanLine,
   },
+
   {
-    title: "Revisão de benefício",
+    title: "Ecografia",
     description:
-      "Análise detalhada do benefício previdenciário para identificar possíveis erros, diferenças ou oportunidades de revisão junto ao INSS.",
-    image: RevisaoBg,
-    imagePosition: "center",
-    whatsappMessage:
-      "Olá, gostaria de saber mais sobre revisão de benefício previdenciário.",
+      "Ultrassonografia especializada para avaliação dos órgãos do aparelho digestivo.",
+    icon: Activity,
   },
+
   {
-    title: "Averbação de período rural e especial",
+    title: "Manometria Esofágica",
     description:
-      "Atuação na comprovação e inclusão de períodos rurais ou especiais para fortalecer o histórico previdenciário e auxiliar no acesso ao benefício.",
-    image: AverbacaoBg,
-    imagePosition: "center",
-    whatsappMessage:
-      "Olá, gostaria de orientação sobre averbação de período rural ou especial.",
+      "Exame funcional utilizado para avaliar a motilidade do esôfago.",
+    icon: HeartPulse,
   },
+
   {
-    title: "Auxílio-doença",
+    title: "Teste Respiratório",
     description:
-      "Orientação para segurados temporariamente incapazes de trabalhar, com análise de documentos médicos e acompanhamento do pedido.",
-    image: AuxilioDoencaBg,
-    imagePosition: "center",
-    whatsappMessage: "Olá, gostaria de informações sobre auxílio-doença.",
+      "Método não invasivo para diagnóstico de supercrescimento bacteriano intestinal (SIBO).",
+    icon: Activity,
   },
+
   {
-    title: "Benefício assistencial",
+    title: "Balão Intragástrico",
     description:
-      "Atendimento para análise de direito ao BPC/LOAS, voltado a idosos e pessoas com deficiência em situação de vulnerabilidade.",
-    image: BeneficioAssistencialBg,
-    imagePosition: "center",
-    whatsappMessage:
-      "Olá, gostaria de saber mais sobre benefício assistencial BPC/LOAS.",
+      "Procedimento minimamente invasivo para auxiliar no tratamento da obesidade.",
+    icon: Stethoscope,
   },
+
   {
-    title: "Pensão por morte",
+    title: "Cirurgia Bariátrica",
     description:
-      "Acompanhamento jurídico para dependentes que buscam garantir o benefício após o falecimento de um familiar segurado.",
-    image: PensaoMorteBg,
-    imagePosition: "center",
-    whatsappMessage: "Olá, gostaria de orientação sobre pensão por morte.",
+      "Tratamento cirúrgico da obesidade indicado para pacientes com critérios médicos específicos.",
+    icon: HeartPulse,
   },
+
   {
-    title: "Família",
+    title: "Cirurgia Digestiva",
     description:
-      "Atuação em demandas familiares com acolhimento, clareza e responsabilidade, buscando soluções jurídicas seguras e humanizadas.",
-    image: FamiliaBg,
-    imagePosition: "center",
-    whatsappMessage:
-      "Olá, gostaria de mais informações sobre atendimento em Direito de Família.",
+      "Procedimentos cirúrgicos modernos para tratamento das doenças do aparelho digestivo.",
+    icon: ScanLine,
   },
 ];
 
 const Areas = () => {
   return (
-    <section id="areas" className="relative py-24 bg-(--background)">
-      <div className="container mx-auto px-4">
-        <div className="mb-16 text-center">
+    <section id="areas" className="relative overflow-hidden py-28 bg-[#F9FCFB]">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="text-center">
           <motion.span
             variants={SlideUp(0.1)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="text-xs tracking-[0.3em] uppercase text-(--gold-deep)"
+            className="text-sm tracking-[0.3em] uppercase text-(--gray-dark)"
           >
-            Áreas de atuação
+            Procedimentos
           </motion.span>
 
           <motion.h2
@@ -96,11 +81,9 @@ const Areas = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mt-4 mb-4 font-display text-3xl md:text-4xl lg:text-5xl text-(--foreground)"
+            className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
           >
-            Direito previdenciário com clareza,
-            <br className="hidden md:block" />
-            <span className="md:inline"> estratégia e acolhimento</span>
+            Tratamentos e exames de <br /> alta precisão
           </motion.h2>
 
           <motion.div
@@ -108,64 +91,87 @@ const Areas = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="hairline mt-8 mx-auto w-32"
-          />
+            className="hairline mt-9 mx-auto w-32"
+          ></motion.div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service, index) => {
-            const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-              service.whatsappMessage,
-            )}`;
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+          {procedures.map((procedure, index) => {
+            const Icon = procedure.icon;
 
             return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 45 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
+              <motion.a
+                key={procedure.title}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.2,
+                }}
+                transition={{
+                  delay: 0.05,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
+                className="
+                group
+                relative
+                overflow-hidden
+                rounded-[34px]
+                border
+                border-(--primary-lighter)
+                bg-(--card)
+                p-8
+                shadow-[0_10px_0px_rgba(0,0,0,.05)]
+                transition-all
+                duration-300
+                hover:border-(--primary)/20
+                hover:bg-(--primary-lighter)/10
+                hover:shadow-[0_10px_0px_rgba(13,178,107,0.80)]
+                "
               >
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Falar com a advogada sobre ${service.title}`}
-                  className="group/card relative block h-[430px] overflow-hidden cursor-pointer rounded-[1.75rem] shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_70px_rgba(156,125,61,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-4 focus-visible:ring-offset-(--background)"
+                <div
+                  className="
+                  mx-auto
+                  flex
+                  h-24
+                  w-24
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-(--primary)/8
+                  transition-all
+                  duration-300
+                  group-hover:bg-(--primary)/12
+                  "
                 >
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-110"
-                    style={{ objectPosition: service.imagePosition }}
-                    loading="lazy"
-                    decoding="async"
+                  <Icon
+                    size={42}
+                    strokeWidth={1.7}
+                    className="text-(--primary)"
                   />
+                </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15 transition-all duration-500 group-hover/card:from-black/90 group-hover/card:via-black/55" />
+                <h3 className="mt-8 text-center text-2xl font-semibold leading-snug text-(--foreground)">
+                  {procedure.title}
+                </h3>
 
-                  <div className="absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10 transition-all duration-500 group-hover/card:ring-(--gold)/60" />
+                {/* Linha */}
+                <div className="mx-auto mt-5 h-[3px] w-16 rounded-full bg-(--primary) transition-all duration-300 group-hover:w-24" />
 
-                  <div className="absolute inset-x-0 bottom-0 z-20 p-6 md:p-7">
-                    <div className="translate-y-0 transition-transform duration-500 ease-out group-hover/card:-translate-y-1">
-                      <h3 className="font-display text-3xl leading-tight text-white">
-                        {service.title}
-                      </h3>
-
-                      <div className="hairline mt-5 w-full" />
-
-                      <p className="mt-4 max-w-[95%] text-sm md:text-base leading-relaxed text-white/85 opacity-100 transition-all duration-500">
-                        {service.description}
-                      </p>
-
-                      <div className="mt-6 inline-flex items-center gap-2 text-(--gold-soft) font-medium ">
-                        <span>Saiba mais</span>
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/card:translate-x-2" />
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </motion.div>
+                <p className="mt-6 text-center text-base leading-8 text-(--muted-foreground)">
+                  {procedure.description}
+                </p>
+              </motion.a>
             );
           })}
         </div>
