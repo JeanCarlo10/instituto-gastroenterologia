@@ -106,7 +106,7 @@
 
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
+  ChevronsRight,
   ShieldCheck,
   HeartHandshake,
   Microscope,
@@ -205,74 +205,6 @@ const Hero = () => {
                 doenças do aparelho digestivo.
               </motion.p>
 
-              {/* Diferenciais */}
-
-              {/* <motion.div
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.45,
-                  duration: 0.8,
-                }}
-                className="mt-10 grid grid-cols-2 gap-5"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="h-11 w-11 rounded-xl bg-(--primary)/10 flex items-center justify-center">
-                    <HeartHandshake size={22} className="text-(--primary)" />
-                  </div>
-
-                  <div>
-                    <p className="font-semibold">Atendimento</p>
-
-                    <p className="text-sm text-(--muted-foreground)">
-                      Humanizado
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="h-11 w-11 rounded-xl bg-(--primary)/10 flex items-center justify-center">
-                    <Microscope size={22} className="text-(--primary)" />
-                  </div>
-
-                  <div>
-                    <p className="font-semibold">Tecnologia</p>
-
-                    <p className="text-sm text-(--muted-foreground)">
-                      Equipamentos modernos
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="h-11 w-11 rounded-xl bg-(--primary)/10 flex items-center justify-center">
-                    <ShieldCheck size={22} className="text-(--primary)" />
-                  </div>
-
-                  <div>
-                    <p className="font-semibold">Diagnóstico</p>
-
-                    <p className="text-sm text-(--muted-foreground)">
-                      Seguro e preciso
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="h-11 w-11 rounded-xl bg-(--primary)/10 flex items-center justify-center">
-                    <CheckCircle2 size={22} className="text-(--primary)" />
-                  </div>
-
-                  <div>
-                    <p className="font-semibold">Equipe Médica</p>
-
-                    <p className="text-sm text-(--muted-foreground)">
-                      Especializada
-                    </p>
-                  </div>
-                </div>
-              </motion.div> */}
-
               {/* BOTÕES */}
 
               <motion.div
@@ -281,6 +213,7 @@ const Hero = () => {
                 transition={{
                   delay: 0.6,
                   duration: 0.8,
+                  ease: "easeOut",
                 }}
                 className="mt-12 flex flex-col sm:flex-row gap-5"
               >
@@ -288,15 +221,46 @@ const Hero = () => {
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-between h-16 w-[310px] rounded-full bg-(--primary) px-8 text-white font-semibold shadow-lg shadow-(--primary)/25 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-(--primary)/30"
+                  className="group relative flex h-[70px] w-[355px] items-center rounded-full bg-(--primary-dark-medium) p-[5px] 
+                    overflow-hidden 
+                    transition-all 
+                    duration-500 
+                    hover:-translate-y-1
+                    hover:scale-[1.02]
+                    hover:shadow-[0_20px_50px_rgba(13,178,107,.20)]
+                    active:scale-[0.98]"
                 >
-                  <span>Agendar consulta</span>
+                  {/* Texto */}
+                  <span
+                    className="relative z-10 flex flex-1 h-full items-center justify-center rounded-full bg-[#083B35]
+                      text-(--primary-lighter)
+                      text-[22px]
+                      font-semibold
+                      tracking-[-0.02em]
+                      transition-all
+                      duration-500"
+                  >
+                    Agendar consulta
+                  </span>
 
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white">
-                    <ArrowRight
-                      size={22}
-                      className="text-(--primary) transition-transform duration-300 group-hover:translate-x-1"
-                    />
+                  <span className="relative z-10 ml-1 flex h-full w-[82px] items-center justify-center rounded-full transition-all duration-500 group-hover:w-[95px]">
+                    <motion.div
+                      animate={{
+                        x: [0, 4, 0],
+                      }}
+                      transition={{
+                        repeat: Infinity,
+                        duration: 1.8,
+                        ease: "easeInOut",
+                      }}
+                      className="group-hover:animate-none"
+                    >
+                      <ChevronsRight
+                        size={30}
+                        strokeWidth={2.5}
+                        className="text-(--primary-lighter) transition-all duration-500 group-hover:translate-x-2"
+                      />
+                    </motion.div>
                   </span>
                 </a>
               </motion.div>
@@ -304,10 +268,7 @@ const Hero = () => {
 
             {/* RIGHT */}
 
-            <div
-              className="lg:col-span-6 "
-              // className="lg:col-span-6"
-            >
+            <div className="lg:col-span-6">
               {/* <div className="relative flex justify-center"> */}
               <div className="absolute inset-y-0 right-0 w-[58vw] overflow-hidden">
                 {/* Glow */}
