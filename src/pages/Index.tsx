@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
 const Reviews = React.lazy(() => import("@/components/Reviews"));
-const Areas = React.lazy(() => import("@/components/Areas"));
+const Procedures = React.lazy(() => import("@/components/Procedures"));
 const About = React.lazy(() => import("@/components/About"));
 const Contact = React.lazy(() => import("@/components/Contact"));
 const Footer = React.lazy(() => import("@/components/Footer"));
@@ -83,7 +83,7 @@ const Index = () => {
 
         <LazyOnView>
           <Suspense fallback={null}>
-            <Areas />
+            <Procedures />
           </Suspense>
         </LazyOnView>
 

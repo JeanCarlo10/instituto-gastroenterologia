@@ -299,20 +299,12 @@ const Hero = () => {
                     />
                   </span>
                 </a>
-
-                <a
-                  href="#areas"
-                  className="inline-flex h-16 w-[310px] items-center justify-center rounded-full border border-(--primary)/30 bg-white text-(--foreground) font-semibold transition-all duration-300 hover:border-(--primary) hover:bg-(--primary)/5 hover:-translate-y-1"
-                >
-                  Conhecer especialidades
-                </a>
               </motion.div>
             </div>
 
             {/* RIGHT */}
 
             <div
-              
               className="lg:col-span-6 "
               // className="lg:col-span-6"
             >
@@ -329,7 +321,6 @@ const Hero = () => {
                 {/* Card principal */}
 
                 <div
-                  
                   // className="relative rounded-[38px] overflow-hidden bg-white shadow-[0_40px_90px_rgba(0,0,0,.10)] ring-1 ring-(--primary)/10"
                   className="absolute inset-0"
                 >
@@ -344,7 +335,7 @@ const Hero = () => {
 
                   {/* brilho */}
                   <div
-    className="
+                    className="
     absolute
     inset-0
     bg-gradient-to-r
@@ -352,7 +343,7 @@ const Hero = () => {
     via-white/35
     to-transparent
 "
-/>
+                  />
 
                   {/* <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/40 pointer-events-none" /> */}
                 </div>

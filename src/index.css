@@ -30,6 +30,7 @@
     /* --primary: #0db26b; */
     /* --primary: #997238 ; */
     /* --primary: rgb(13, 178, 107); */
+    /* --primary-lighter: rgb(223, 248, 237); */
 
     --primary: #0db26b;
     --primary-dark: #08965a;
@@ -38,18 +39,12 @@
     --primary-light: #6ddba9;
     --primary-light-medium: #36c689;
     --primary-lighter: #dff8ed;
-    /* --primary-lighter: rgb(223, 248, 237); */
-
-    --primary-foreground: #fefbf8;
 
     --secondary: #f9fcfb;
     --secondary-foreground: #342c23;
 
     --muted: #f6f1e9;
     --muted-foreground: #6b6157;
-
-    --accent: #d9c098;
-    --accent-foreground: #282017;
 
     --gold: #d9c098;
     --gold-soft: #e0cfb0;

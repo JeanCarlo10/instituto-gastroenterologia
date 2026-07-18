@@ -113,7 +113,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="#areas"
+              href="#procedures"
               className="text-(--gold-soft) transition-all duration-300 hover:text-white hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_rgba(224,207,176,0.3)]"
             >
               Áreas de Atuação
