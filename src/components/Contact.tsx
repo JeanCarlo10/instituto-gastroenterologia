@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import { Phone, MapPin, Clock3 } from "lucide-react";
+import { Phone, MapPin, ChevronsRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "5545999999999";
@@ -59,7 +59,7 @@ const Contact = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-8 mb-8 max-w-xl text-xl text-(--gray-dark)"
+              className="mt-8 mb-12 max-w-xl text-xl text-(--gray-dark)"
             >
               Entre em contato conosco e nossa equipe <br /> terá o prazer em
               atender você.
@@ -106,6 +106,54 @@ const Contact = () => {
                   <p className="mt-1 text-xl font-semibold text-(--gray-medium)">
                     (45) 99999-9999
                   </p>
+
+                  {/* BOTÃO CTA */}
+
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative mt-6 flex h-[65px] items-center rounded-full bg-(--primary-dark-medium) p-[5px] 
+                    overflow-hidden 
+                    transition-all 
+                    duration-500 
+                    hover:-translate-y-1
+                    hover:scale-[1.02]
+                    hover:shadow-[0_20px_50px_rgba(13,178,107,.20)]
+                    active:scale-[0.98]"
+                  >
+                    <span
+                      className="relative z-10 flex flex-1 h-full items-center justify-center rounded-full bg-[#083B35]
+                      text-(--primary-lighter)
+                      text-[22px]
+                      font-semibold
+                      tracking-[-0.02em]
+                      transition-all
+                      duration-500"
+                    >
+                      Agendar consulta
+                    </span>
+
+                    <span className="relative z-10 ml-1 flex h-full w-[82px] items-center justify-center rounded-full transition-all duration-500 group-hover:w-[95px]">
+                      <motion.div
+                        animate={{
+                          x: [0, 4, 0],
+                        }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 1.8,
+                          ease: "easeInOut",
+                        }}
+                        className="group-hover:animate-none"
+                      >
+                        <ChevronsRight
+                          size={30}
+                          strokeWidth={2.5}
+                          className="text-(--primary-lighter) transition-all duration-500 group-hover:translate-x-2"
+                        />
+                      </motion.div>
+                    </span>
+                  </a>
                 </div>
               </a>
 
@@ -188,25 +236,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              {/* Horário */}
-
-              <div className="mt-6 rounded-2xl bg-[#F4FCF8] border border-[#B7E9D2] p-7">
-                <div className="flex items-center gap-5">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-(--primary)/12">
-                    <Clock3 size={24} className="text-[#0B8F57]" />
-                  </div>
-
-                  <div>
-                    <p className="text-sm text-(--gray-dark)">
-                      Horário de atendimento
-                    </p>
-
-                    <p className="mt-3 text-(--gray-medium) text-lg font-semibold">
-                      Segunda à Sexta: <span>08:00 às 18:00</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              
             </motion.div>
           </div>
 
@@ -224,7 +254,7 @@ const Contact = () => {
             <div
               className="
                 relative
-                h-[612px]
+                h-[745px]
                 overflow-hidden
                 rounded-[42px]
                 border
@@ -242,53 +272,7 @@ const Contact = () => {
               ></iframe>
             </div>
 
-            <motion.div
-              variants={SlideUp(0.45)}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="mt-5 overflow-hidden rounded-3xl bg-(--primary) p-10 text-white"
-            >
-              <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
-                <div className="max-w-xl">
-                  <h3 className=" text-3xl font-semibold leading-tight md:text-4xl">
-                    Pronto para cuidar
-                    <br />
-                    da sua saúde?
-                  </h3>
-                </div>
-
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    group
-                    inline-flex
-                    items-center
-                    justify-center
-                    gap-4
-                    rounded-full
-                    bg-white
-                    px-8
-                    py-4
-                    text-lg
-                    font-medium
-                    text-(--primary)
-                    transition-all
-                    duration-300
-                    hover:-translate-y-1
-                    hover:shadow-[0_20px_45px_rgba(0,0,0,.18)]
-                  "
-                >
-                  Agendar consulta
-                  <FaWhatsapp
-                    size={20}
-                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
-                </a>
-              </div>
-            </motion.div>
+            
           </motion.div>
         </div>
       </div>
