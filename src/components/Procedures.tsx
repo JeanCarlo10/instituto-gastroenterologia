@@ -63,7 +63,7 @@ const procedures = [
 
 const Procedures = () => {
   return (
-    <section id="procedures" className="relative overflow-hidden py-28 bg-(--secondary)">
+    <section id="procedures" className="relative overflow-hidden py-28 bg-[#FCFCFB]">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center">
           <motion.span
@@ -128,13 +128,13 @@ const Procedures = () => {
                 overflow-hidden
                 rounded-[34px]
                 border
-                border-(--primary-lighter)
+                border-(--border)
                 bg-(--card)
                 p-8
                 shadow-[0_10px_0px_rgba(0,0,0,.05)]
                 transition-all
                 duration-300
-                hover:border-(--primary)/20
+                hover:border-(--primary)
                 hover:bg-(--primary-lighter)/10
                 hover:shadow-[0_10px_0px_rgba(13,178,107,0.80)]
                 "

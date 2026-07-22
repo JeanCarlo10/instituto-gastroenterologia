@@ -27,7 +27,7 @@ const Reviews = () => {
 
   return (
     <>
-      <section id="reviews" className="py-20 bg-(--secondary)">
+      <section id="reviews" className="py-20 bg-[#9bd5bf]/10">
         <div className="container mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
             <motion.span

@@ -153,7 +153,7 @@ const Team = () => {
   >(null);
 
   return (
-    <section id="team" className="relative overflow-hidden py-28 bg-[#F8FCFA]">
+    <section id="team" className="relative overflow-hidden py-28 bg-[#FCFCFB]">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="mb-20 text-center">
           <motion.span
@@ -198,16 +198,9 @@ const Team = () => {
             return (
               <motion.div
                 key={member.id}
-                variants={SlideUp(index * 0.08)}
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                whileHover={{
-                  y: -8,
-                }}
-                transition={{
-                  duration: 0.3,
-                }}
               >
                 <Card
                   className="
@@ -224,8 +217,7 @@ const Team = () => {
                   shadow-[0 12px 30px rgba(0,0,0,.06)]
                   transition-all
                   duration-300
-                  hover:-translate-y-2
-                  hover:shadow-[0_35px_80px_rgba(13,178,107,.14)]
+                  hover:shadow-[0_15px_40px_rgba(13,178,107,.14)]
                   "
                 >
                   {/* FOTO */}

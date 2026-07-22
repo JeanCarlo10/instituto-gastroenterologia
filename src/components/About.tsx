@@ -51,7 +51,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
+              className="text-lg leading-relaxed text-(--gray-medium) mb-6"
             >
               Fundada em 2004, em Foz do Iguaçu, a Clínica IGC nasceu da união
               de um grupo de médicos dedicados ao cuidado especializado das
@@ -67,7 +67,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg leading-relaxed text-(--muted-foreground) mb-6"
+              className="text-lg leading-relaxed text-(--gray-medium) mb-6"
             >
               Desde sua origem, o IGC se tornou referência no tratamento de
               gastrite, úlceras, hérnias, cálculos na vesícula, refluxo,
@@ -87,7 +87,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-lg leading-relaxed text-(--muted-foreground)"
+              className="text-lg leading-relaxed text-(--gray-medium)"
             >
               Atualmente, a Clínica IGC atua no diagnóstico e tratamento de
               doenças do aparelho digestivo, oferecendo um atendimento
@@ -110,9 +110,9 @@ const About = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Excelência Médica</h4>
+                  <h4 className="font-semibold text-lg text-(--gray-dark)">Excelência Médica</h4>
 
-                  <p className="text-(--muted-foreground)">Desde 2004</p>
+                  <p className="text-(--gray-medium)">Desde 2004</p>
                 </div>
               </div>
 
@@ -122,9 +122,9 @@ const About = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Segurança</h4>
+                  <h4 className="font-semibold text-lg text-(--gray-dark)">Segurança</h4>
 
-                  <p className="text-(--muted-foreground)">
+                  <p className="text-(--gray-medium)">
                     Protocolos atualizados
                   </p>
                 </div>
@@ -136,9 +136,9 @@ const About = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg">Atendimento</h4>
+                  <h4 className="font-semibold text-lg text-(--gray-dark)">Atendimento</h4>
 
-                  <p className="text-(--muted-foreground)">Humanizado</p>
+                  <p className="text-(--gray-medium)">Humanizado</p>
                 </div>
               </div>
             </motion.div>

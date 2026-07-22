@@ -1,176 +1,296 @@
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
-import { Mail, MapPin } from "lucide-react";
 import { SlideUp } from "@/animations";
-import VeronicaImage from "@/assets/Hero2.png";
+import { Phone, MapPin, Clock3 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "45999999999";
+const WHATSAPP_NUMBER = "5545999999999";
 
-const WHATSAPP_TEXT =
-  "Olá! Gostaria de receber orientação sobre meu caso previdenciário.";
+const WHATSAPP_TEXT = "Olá! Gostaria de agendar uma consulta.";
 
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT,
 )}`;
 
-// const MAPS_LINK = "https://maps.app.goo.gl/TBEZwSznr4E8xvRW7";
+const PHONE = "(45) 3572-0404";
+
+const MAPS_LINK = "https://maps.app.goo.gl/mR8TCxKgvDaCf3Kh7";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative py-28 overflow-hidden bg-(--background)"
+      className="relative overflow-hidden bg-[#FCFCFB] py-28"
     >
-      <div className="container mx-auto px-6 md:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.span
-            variants={SlideUp(0.1)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="text-xs tracking-[0.3em] uppercase text-(--gold-deep)"
-          >
-            Vamos Conversar?
-          </motion.span>
-
-          <motion.h2
-            variants={SlideUp(0.2)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="mt-4 mb-4 font-display text-3xl md:text-4xl lg:text-5xl text-(--foreground)"
-          >
-            Vamos analisar
-            <br className="hidden md:block" />
-            <span className="md:inline"> o seu caso?</span>
-          </motion.h2>
-
-          <motion.div
-            variants={SlideUp(0.3)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="hairline mt-8 mx-auto w-32"
-          ></motion.div>
-
-          <motion.p
-            variants={SlideUp(0.4)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="mt-8 text-lg md:text-xl text-(--muted-foreground) max-w-2xl mx-auto leading-relaxed"
-          >
-            Uma orientação previdenciária adequada pode fazer toda a diferença
-            na conquista dos seus direitos e na segurança do seu futuro.
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            variants={SlideUp(0.5)}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="mt-10 flex justify-center"
-          >
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-4 rounded-full bg-(--primary) px-7 py-3 text-white font-medium tracking-wide transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(153,114,56,0.25)]"
+      <div className="container relative z-10 mx-auto px-6 lg:px-8">
+        <div className="grid gap-12 xl:grid-cols-[38%_62%]">
+          <div className="max-w-3xl">
+            <motion.span
+              variants={SlideUp(0.1)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="uppercase tracking-[0.35em] text-sm text-(--gray-dark)"
             >
-              <span>Falar no WhatsApp</span>
+              Contato
+            </motion.span>
 
-              <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white shrink-0 transition-transform duration-500 group-hover:translate-x-1">
-                <FaWhatsapp
-                  size={22}
-                  className="absolute text-(--primary) transition-all duration-500 ease-in-out group-hover:translate-x-[40px]"
-                />
+            <motion.div
+              variants={SlideUp(0.2)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="hairline mt-7 w-24"
+            />
 
-                <FaWhatsapp
-                  size={22}
-                  className="absolute text-(--primary) -translate-x-[40px] transition-all duration-500 ease-in-out group-hover:translate-x-0"
-                />
-              </span>
-            </a>
-          </motion.div>
-        </div>
+            <motion.h2
+              variants={SlideUp(0.3)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="mt-8 text-4xl font-bold leading-[1.08] text-(--gray-medium) md:text-5xl lg:text-6xl"
+            >
+              Estamos aqui
+              <br />
+              para cuidar de você.
+            </motion.h2>
 
-        {/* CARD ADVOGADA */}
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-10 mb-5 max-w-4xl mx-auto rounded-[40px] border border-(--gold-deep)/15 bg-white p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
-        >
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            {/* FOTO */}
-            <div className="shrink-0">
-              <img
-                src={VeronicaImage}
-                alt="Advogada"
-                className="w-52 h-52 object-cover rounded-full border-4 border-(--gold-soft)"
-              />
+            <motion.p
+              variants={SlideUp(0.4)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="mt-8 mb-8 max-w-xl text-xl text-(--gray-dark)"
+            >
+              Entre em contato conosco e nossa equipe <br /> terá o prazer em
+              atender você.
+            </motion.p>
+
+            <motion.div
+              variants={SlideUp(0.2)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="space-y-5"
+            >
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                group
+                flex
+                items-center
+                gap-5
+                border-b
+                border-(--border)
+                pb-6
+              "
+              >
+                <div
+                  className="
+                  flex
+                  h-16
+                  w-16
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-(--primary)/12
+                "
+                >
+                  <FaWhatsapp size={28} className="text-(--primary)" />
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-sm text-(--gray-dark)">WhatsApp</p>
+
+                  <p className="mt-1 text-xl font-semibold text-(--gray-medium)">
+                    (45) 99999-9999
+                  </p>
+                </div>
+              </a>
+
+              {/* Telefone */}
+
+              <a
+                href={`tel:${PHONE}`}
+                className="
+                group
+                flex
+                items-center
+                gap-5
+                border-b
+                border-(--border)
+                pb-6
+              "
+              >
+                <div
+                  className="
+                  flex
+                  h-16
+                  w-16
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-(--primary)/12
+                "
+                >
+                  <Phone size={24} className="text-(--primary)" />
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-sm text-(--gray-dark)">Telefone</p>
+
+                  <p className="mt-1 text-xl font-semibold text-(--gray-medium)">
+                    (45) 3572-0404
+                  </p>
+                </div>
+              </a>
+
+              {/* Endereço */}
+
+              <a
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                group
+                flex
+                items-center
+                gap-5
+                border-b
+                border-(--border)
+                pb-6
+                cursor-pointer
+              "
+              >
+                <div
+                  className="
+                  flex
+                  h-16
+                  w-16
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-(--primary)/12
+                "
+                >
+                  <MapPin size={24} className="text-(--primary)" />
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-sm text-(--gray-dark)">Endereço</p>
+
+                  <p className="mt-1 text-xl font-semibold text-(--gray-medium) ">
+                    R. Mal. Floriano Peixoto, 735
+                    <br />
+                    Centro • Foz do Iguaçu - PR
+                  </p>
+                </div>
+              </a>
+
+              {/* Horário */}
+
+              <div className="mt-6 rounded-2xl bg-[#F4FCF8] border border-[#B7E9D2] p-7">
+                <div className="flex items-center gap-5">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-(--primary)/12">
+                    <Clock3 size={24} className="text-[#0B8F57]" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm text-(--gray-dark)">
+                      Horário de atendimento
+                    </p>
+
+                    <p className="mt-3 text-(--gray-medium) text-lg font-semibold">
+                      Segunda à Sexta: <span>08:00 às 18:00</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* ================================================= */}
+          {/* COLUNA DIREITA */}
+          {/* ================================================= */}
+
+          <motion.div
+            variants={SlideUp(0.35)}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div
+              className="
+                relative
+                h-[612px]
+                overflow-hidden
+                rounded-[42px]
+                border
+                border-[#EEF2F0]
+                bg-white
+                shadow-[0_35px_80px_rgba(0,0,0,.08)]
+              "
+            >
+              <iframe
+                title="Mapa Clínica IGC"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3599.7146320027036!2d-54.58425049999999!3d-25.547880900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691b4570f77ed%3A0x48cdbb147b7788df!2sInstituto%20de%20Gastroenterologia%20e%20Cirurgia!5e0!3m2!1spt-BR!2sbr!4v1784741564937!5m2!1spt-BR!2sbr"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              ></iframe>
             </div>
 
-            {/* TEXTO */}
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="font-display text-3xl text-(--foreground)">
-                Vanessa Ferraz
-              </h3>
+            <motion.div
+              variants={SlideUp(0.45)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="mt-5 overflow-hidden rounded-3xl bg-(--primary) p-10 text-white"
+            >
+              <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-xl">
+                  <h3 className=" text-3xl font-semibold leading-tight md:text-4xl">
+                    Pronto para cuidar
+                    <br />
+                    da sua saúde?
+                  </h3>
+                </div>
 
-              <p className="mt-2 text-(--gold-deep) tracking-wide uppercase text-sm">
-                Advogada Previdenciária
-              </p>
-
-              <p className="mt-6 text-(--muted-foreground) leading-relaxed">
-                Atendimento jurídico voltado à proteção dos direitos
-                previdenciários, com acompanhamento personalizado, clareza nas
-                orientações e comprometimento em cada etapa do processo.
-              </p>
-
-              {/* CONTATOS */}
-              <div className="grid md:grid-cols-2 gap-8 mt-8">
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center md:items-start group transition-all duration-300 hover:-translate-y-1"
+                  className="
+                    group
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-4
+                    rounded-full
+                    bg-white
+                    px-8
+                    py-4
+                    text-lg
+                    font-medium
+                    text-(--primary)
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:shadow-[0_20px_45px_rgba(0,0,0,.18)]
+                  "
                 >
-                  <FaWhatsapp className="w-5 h-5 text-(--gold-deep) group-hover:scale-110 transition-transform" />
-
-                  <p className="mt-2 text-sm group-hover:text-(--gold-deep)">
-                    (45) 99999-9999
-                  </p>
-                </a>
-
-                <a
-                  href="mailto:advogada.adv@gmail.com"
-                  className="flex flex-col items-center md:items-start group transition-all duration-300 hover:-translate-y-1 break-all"
-                >
-                  <Mail className="w-5 h-5 text-(--gold-deep) group-hover:scale-110 transition-transform" />
-
-                  <p className="mt-2 text-sm group-hover:text-(--gold-deep)">
-                    advogada.adv@gmail.com
-                  </p>
-                </a>
-
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left group transition-all duration-300 hover:-translate-y-1"
-                >
-                  <MapPin className="w-5 h-5 text-(--gold-deep) group-hover:scale-110 transition-transform" />
-                  <p className="mt-2 text-sm group-hover:text-(--gold-deep)">
-                    Av. Brasil, 1000 - Centro - Foz do Iguaçu
-                    - PR
-                  </p>
+                  Agendar consulta
+                  <FaWhatsapp
+                    size={20}
+                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  />
                 </a>
               </div>
-            </div>
-          </div>
-        </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
