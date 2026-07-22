@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Scale } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
 

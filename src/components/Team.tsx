@@ -190,7 +190,7 @@ const Team = () => {
         {/* ========================= */}
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {teamMembers.map((member, index) => {
+          {teamMembers.map((member) => {
             const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
               member.whatsapp,
             )}`;
