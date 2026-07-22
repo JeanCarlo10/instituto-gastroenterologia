@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import { Quote, X } from "lucide-react";
+import { Quote } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const items = [
   {
@@ -24,10 +25,6 @@ const Reviews = () => {
   const [selected, setSelected] = useState<(typeof items)[0] | null>(null);
   const [expanded, setExpanded] = useState<boolean[]>([]);
 
-  useEffect(() => {
-    document.body.style.overflow = selected ? "hidden" : "auto";
-  }, [selected]);
-
   return (
     <>
       <section id="reviews" className="py-20 bg-(--secondary)">
@@ -48,7 +45,7 @@ const Reviews = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-4 mb-4 font-display text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
+              className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
             >
               O que dizem nossos pacientes
             </motion.h2>
@@ -77,46 +74,54 @@ const Reviews = () => {
         </div>
       </section>
 
-      <AnimatePresence>
-        {selected && (
-          <>
-            <motion.div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelected(null)}
-            />
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
+        <DialogContent
+          className="
+            max-w-6xl
+            w-[95vw]
+            rounded-[40px]
+            border-0
+            bg-white
+            p-0
+            overflow-hidden
+            shadow-[0_30px_80px_rgba(0,0,0,.18)]
+          "
+        >
+          {selected && (
+            <div className="p-14 md:p-20">
+              <Quote size={60} strokeWidth={1.5} className="text-(--primary)" />
 
-            <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 30 }}
-              transition={{ duration: 0.35 }}
-              className="fixed left-1/2 top-1/2 z-50 w-[92%] max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-white p-10 shadow-2xl"
-            >
-              <button
-                onClick={() => setSelected(null)}
-                className="absolute right-5 top-5 rounded-full p-2 cursor-pointer hover:bg-gray-100 transition"
+              <blockquote
+                className="
+            mt-10
+            text-2xl
+            leading-[1.9]
+            text-(--gray-dark)
+          "
               >
-                <X size={20} />
-              </button>
-
-              <Quote size={42} className="text-(--primary)" strokeWidth={1.6} />
-
-              <p className="mt-8 text-xl leading-9 text-(--gray-dark)">
                 “{selected.quote}”
-              </p>
+              </blockquote>
 
-              <div className="mt-10 border-t pt-6">
-                <span className="uppercase tracking-[0.2em] text-(--primary) text-sm font-medium">
+              <div className="mt-10 border-t border-(--border) pt-10">
+                <span
+                  className="
+              uppercase
+              tracking-[0.35em]
+              text-sm
+              font-medium
+              text-(--primary)
+            "
+                >
                   {selected.author}
                 </span>
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
@@ -157,9 +162,9 @@ function ReviewCard({ item, index, expanded, setExpanded, onOpen }: CardProps) {
         h-[380px]
         rounded-3xl
         border
-        border-(--primary)/15
+        border-(--border)
         bg-(--card)
-        p-9
+        p-8
         shadow-card
         hover:shadow-[0_25px_60px_rgba(13,178,107,.15)]
         transition-all

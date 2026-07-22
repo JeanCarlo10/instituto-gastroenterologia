@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
 import { Stethoscope, GraduationCap } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -219,7 +219,7 @@ const Team = () => {
                   overflow-hidden
                   rounded-2xl
                   border
-                  border-[#EDF4F0]
+                  border-(--border)
                   bg-white
                   shadow-[0 12px 30px rgba(0,0,0,.06)]
                   transition-all
@@ -402,7 +402,7 @@ const Team = () => {
                 <div className="flex h-full min-h-0 flex-col">
                   {/* HEADER FIXO */}
 
-                  <div className="border-b border-[#EEF2F0] px-10 py-6 mb-6">
+                  <div className="border-b border-(--border) px-10 py-6 mb-6">
                     <DialogHeader>
                       <DialogTitle className="text-4xl font-bold leading-tight">
                         {selectedDoctor.name}
@@ -461,10 +461,7 @@ const Team = () => {
                       <div className="mt-5 space-y-3">
                         {selectedDoctor.education.map((item) => (
                           <div key={item} className="flex items-start gap-3">
-                            <GraduationCap
-                              size={18}
-                              className="mt-1 text-(--primary)"
-                            />
+                            <GraduationCap className="min-w-6 min-h-6 mt-1 text-(--primary)" />
 
                             <span className="leading-7 text-(--gray-medium)">
                               {item}

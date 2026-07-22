@@ -42,7 +42,7 @@
 
     --secondary: #f9fcfb;
     --secondary-light: #F3FCF8;
-    
+
     --secondary-foreground: #342c23;
 
     --muted: #f6f1e9;
@@ -56,12 +56,8 @@
     --gray-medium: #5a6472;
     --gray-dark: #3e434b;
 
-    --border: #eae4da;
-    --border-light: rgba(204, 178, 129, 0.251);
-    --ring: #997238;
-    --input: #eae4da;
+    --border: #e6e6e6;
 
-    --blur: hsla(0, 0%, 100%, 0.35);
     --shadow-soft: 0 4px 24px -8px rgba(134, 109, 73, 0.12);
     --shadow-card:
       0 2px 16px -4px rgba(134, 109, 73, 0.078),
