@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 const Reviews = React.lazy(() => import("@/components/Reviews"));
 const Procedures = React.lazy(() => import("@/components/Procedures"));
 const About = React.lazy(() => import("@/components/About"));
+const Team = React.lazy(() => import("@/components/Team"));
 const Contact = React.lazy(() => import("@/components/Contact"));
 const Footer = React.lazy(() => import("@/components/Footer"));
 const WhatsAppButton = React.lazy(() => import("@/components/WhatsAppButton"));
@@ -90,6 +91,12 @@ const Index = () => {
         <LazyOnView>
           <Suspense fallback={null}>
             <About />
+          </Suspense>
+        </LazyOnView>
+
+        <LazyOnView>
+          <Suspense fallback={null}>
+            <Team />
           </Suspense>
         </LazyOnView>
 

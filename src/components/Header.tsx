@@ -9,11 +9,12 @@ const navItems = [
   { label: "Início", id: "home" },
   { label: "Procedimentos", id: "procedures" },
   { label: "Sobre", id: "about" },
+  { label: "Profissionais", id: "team" },
   { label: "Contato", id: "contact" },
 ];
 
 const WHATSAPP_LINK =
-  "https://wa.me/45999999999?text=Olá!%20Gostaria%20de%20receber%20orientação%20sobre%20meu%20caso%20previdenciário";
+  "https://wa.me/45999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta";
 
 export default function Header() {
   const isMobile = useIsMobile();

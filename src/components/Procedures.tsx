@@ -63,7 +63,7 @@ const procedures = [
 
 const Procedures = () => {
   return (
-    <section id="procedures" className="relative overflow-hidden py-28 bg-[#F9FCFB]">
+    <section id="procedures" className="relative overflow-hidden py-28 bg-(--secondary)">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center">
           <motion.span
