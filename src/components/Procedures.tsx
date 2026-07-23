@@ -121,7 +121,7 @@ const Procedures = () => {
             return (
               <motion.a
                 key={procedure.title}
-                variants={RevealCard(index * 0.18)}
+                variants={RevealCard(index * 0.08)}
                 {...CardHover}
                 target="_blank"
                 rel="noopener noreferrer"
