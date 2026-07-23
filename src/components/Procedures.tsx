@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
-import { SlideUp } from "@/animations";
-
+import {
+  RevealTitle,
+  RevealSubtitle,
+  RevealDivider,
+  RevealCard,
+  StaggerContainer,
+  CardHover,
+  FloatingIcon,
+} from "@/animations";
 import { Stethoscope, ScanLine, Activity, HeartPulse } from "lucide-react";
 
 const procedures = [
@@ -63,11 +70,14 @@ const procedures = [
 
 const Procedures = () => {
   return (
-    <section id="procedures" className="relative overflow-hidden py-28 bg-[#FCFCFB]">
+    <section
+      id="procedures"
+      className="relative overflow-hidden py-28 bg-[#FCFCFB]"
+    >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center">
           <motion.span
-            variants={SlideUp(0.1)}
+            variants={RevealTitle(0.1)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -77,7 +87,7 @@ const Procedures = () => {
           </motion.span>
 
           <motion.h2
-            variants={SlideUp(0.2)}
+            variants={RevealSubtitle(0.2)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -87,7 +97,7 @@ const Procedures = () => {
           </motion.h2>
 
           <motion.div
-            variants={SlideUp(0.4)}
+            variants={RevealDivider(0.4)}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
@@ -95,33 +105,26 @@ const Procedures = () => {
           ></motion.div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        <motion.div
+          variants={StaggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+            amount: 0.15,
+          }}
+          className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        >
           {procedures.map((procedure) => {
             const Icon = procedure.icon;
 
             return (
               <motion.a
                 key={procedure.title}
+                variants={RevealCard()}
+                {...CardHover}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{
-                  opacity: 0,
-                  y: 40,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.2,
-                }}
-                transition={{
-                  delay: 0.05,
-                }}
-                whileHover={{
-                  y: -8,
-                }}
                 className="
                 group
                 relative
@@ -131,15 +134,19 @@ const Procedures = () => {
                 border-(--border)
                 bg-(--card)
                 p-8
-                shadow-[0_10px_0px_rgba(0,0,0,.05)]
+                shadow-[0_20px_45px_rgba(2,25,18,.07)]
                 transition-all
                 duration-300
                 hover:border-(--primary)
-                hover:bg-(--primary-lighter)/10
-                hover:shadow-[0_10px_0px_rgba(13,178,107,0.80)]
+                hover:bg-[#F7FDF9]
                 "
               >
-                <div
+                <motion.div
+                  variants={FloatingIcon}
+                  whileHover={{
+                    rotate: 2,
+                    scale: 1.05,
+                  }}
                   className="
                   mx-auto
                   flex
@@ -159,14 +166,14 @@ const Procedures = () => {
                     strokeWidth={1.7}
                     className="text-(--primary)"
                   />
-                </div>
+                </motion.div>
 
                 <h3 className="mt-8 text-center text-2xl font-semibold leading-snug text-(--foreground)">
                   {procedure.title}
                 </h3>
 
                 {/* Linha */}
-                <div className="mx-auto mt-5 h-[3px] w-16 rounded-full bg-(--primary) transition-all duration-300 group-hover:w-24" />
+                <motion.div className="mx-auto mt-5 h-[3px] w-16 rounded-full bg-(--primary) transition-all duration-500 group-hover:w-24" />
 
                 <p className="mt-6 text-center text-base leading-8 text-(--muted-foreground)">
                   {procedure.description}
@@ -174,7 +181,7 @@ const Procedures = () => {
               </motion.a>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
