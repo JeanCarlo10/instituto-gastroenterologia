@@ -128,16 +128,18 @@ export const RevealCard = (delay = 0): Variants => ({
   initial: {
     opacity: 0,
     scale: 0.97,
-    y: 16,
+    y: 20,
+    filter: "blur(8px)",
   },
 
   animate: {
     opacity: 1,
     scale: 1,
     y: 0,
+    filter: "blur(0px)",
 
     transition: {
-      duration: 0.75,
+      duration: 0.9,
       delay,
       ease: premiumEase,
     },
@@ -153,8 +155,8 @@ export const StaggerContainer: Variants = {
 
   animate: {
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.15,
+      staggerChildren: 0,
+      delayChildren: 0.18,
     },
   },
 };
