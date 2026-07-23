@@ -396,7 +396,7 @@ const Team = () => {
 
                   <div className="border-b border-(--border) px-10 py-6 mb-6">
                     <DialogHeader>
-                      <DialogTitle className="text-4xl font-bold leading-tight">
+                      <DialogTitle className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                         {selectedDoctor.name}
                       </DialogTitle>
 

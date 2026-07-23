@@ -94,27 +94,12 @@ const Reviews = () => {
             <div className="p-10 md:p-20">
               <Quote size={60} strokeWidth={1.5} className="text-(--primary)" />
 
-              <blockquote
-                className="
-            mt-10
-            text-2xl
-            leading-[1.9]
-            text-(--gray-dark)
-          "
-              >
+              <blockquote className="mt-10 text-xl md:text-2xl lg:text-2xl leading-[1.9] text-(--gray-dark)">
                 “{selected.quote}”
               </blockquote>
 
               <div className="mt-10 border-t border-(--border) pt-10">
-                <span
-                  className="
-              uppercase
-              tracking-[0.35em]
-              text-sm
-              font-medium
-              text-(--primary)
-            "
-                >
+                <span className="uppercase tracking-[0.35em] text-sm font-medium text-(--primary)">
                   {selected.author}
                 </span>
               </div>

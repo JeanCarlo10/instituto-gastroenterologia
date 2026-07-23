@@ -102,7 +102,8 @@ const Contact = () => {
                     <span
                       className="relative z-10 flex flex-1 h-full items-center justify-center rounded-full bg-[#083B35]
                       text-(--primary-lighter)
-                      text-[22px]
+                      text-md
+                      lg:text-2xl
                       font-semibold
                       tracking-[-0.02em]
                       transition-all
@@ -138,27 +139,9 @@ const Contact = () => {
 
               <a
                 href={`tel:${PHONE}`}
-                className="
-                group
-                flex
-                items-center
-                gap-5
-                border-b
-                border-(--border)
-                pb-6
-              "
+                className="group flex items-center gap-5 border-b border-(--border) pb-6"
               >
-                <div
-                  className="
-                  flex
-                  h-16
-                  w-16
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-(--primary)/12
-                "
-                >
+                <div className=" flex h-16 w-16 items-center justify-center rounded-2xl bg-(--primary)/12">
                   <Phone size={24} className="text-(--primary)" />
                 </div>
 
@@ -177,28 +160,9 @@ const Contact = () => {
                 href={MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                group
-                flex
-                items-center
-                gap-5
-                border-b
-                border-(--border)
-                pb-6
-                cursor-pointer
-              "
+                className=" group flex items-center gap-5 border-b border-(--border) pb-6 cursor-pointer"
               >
-                <div
-                  className="
-                  flex
-                  h-16
-                  w-16
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-(--primary)/12
-                "
-                >
+                <div className=" flex h-16 w-16 items-center justify-center rounded-2xl bg-(--primary)/12">
                   <MapPin size={24} className="text-(--primary)" />
                 </div>
 
