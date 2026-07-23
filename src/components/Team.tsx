@@ -171,7 +171,7 @@ const Team = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
+            className="mt-4 mb-4 font-bold italic text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
           >
             Médicos altamente <br /> qualificados
           </motion.h2>

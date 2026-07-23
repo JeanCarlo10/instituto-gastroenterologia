@@ -45,9 +45,9 @@ const Reviews = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
+              className="mt-4 mb-4 font-bold italic text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
             >
-              O que dizem nossos pacientes
+              O que dizem nossos <br /> pacientes
             </motion.h2>
 
             <motion.div

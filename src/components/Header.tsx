@@ -32,7 +32,7 @@ export default function Header() {
       ticking = true;
 
       requestAnimationFrame(() => {
-        setIsScrolled(window.scrollY > 40);
+        setIsScrolled(window.scrollY > 10);
         ticking = false;
       });
     };
@@ -168,7 +168,7 @@ export default function Header() {
               alt="Logo clínica"
               loading="eager"
               decoding="async"
-              className="h-auto w-[120px] md:w-[280px] lg:w-[135px]"
+              className="h-auto w-[125px]"
             />
           </a>
 

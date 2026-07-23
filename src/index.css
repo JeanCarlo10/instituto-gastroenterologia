@@ -16,8 +16,11 @@
 
   h1,
   h2,
-  h3 {
-    font-family: "Cormorant Garamond", serif;
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Serif Display", serif
   }
 
   :root {
@@ -28,7 +31,6 @@
     --card-foreground: #1f1913;
 
     /* --primary: #0db26b; */
-    /* --primary: #997238 ; */
     /* --primary: rgb(13, 178, 107); */
     /* --primary-lighter: rgb(223, 248, 237); */
 
@@ -47,10 +49,6 @@
 
     --muted: #f6f1e9;
     --muted-foreground: #6b6157;
-
-    --gold: #d9c098;
-    --gold-soft: #e0cfb0;
-    --gold-deep: #997238;
 
     --gray-light: #bdc0c2;
     --gray-medium: #5a6472;
@@ -119,20 +117,21 @@
 
   /* Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-track {
-    background: var(--primary-dark);
+    background: var(--secondary-light);
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--primary-light);
+    background: var(--primary);
     border-radius: 999px;
+    border: 2px solid var(--secondary-light);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    filter: brightness(1.1);
+    background: var(--primary-dark);
   }
 
   /* Selection text */

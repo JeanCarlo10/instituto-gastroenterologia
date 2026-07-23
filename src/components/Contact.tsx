@@ -22,7 +22,7 @@ const Contact = () => {
       className="relative overflow-hidden bg-[#FCFCFB] py-28"
     >
       <div className="container relative z-10 mx-auto px-6 lg:px-8">
-        <div className="grid gap-12 xl:grid-cols-[38%_62%]">
+        <div className="grid gap-20 xl:grid-cols-[35%_65%]">
           <div className="max-w-3xl">
             <motion.span
               variants={SlideUp(0.1)}
@@ -47,7 +47,7 @@ const Contact = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-8 text-4xl font-bold leading-[1.08] text-(--gray-medium) md:text-5xl lg:text-6xl"
+              className="mt-8 text-4xl font-bold italic leading-[1.08] text-(--gray-medium) md:text-5xl lg:text-6xl"
             >
               Estamos aqui
               <br />
@@ -90,7 +90,7 @@ const Contact = () => {
                     href={WHATSAPP_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative mt-6 flex h-[65px] items-center rounded-full bg-(--primary-dark-medium) p-[5px] 
+                    className="group relative mt-6 flex h-[65px] max-w-[280px] lg:max-w-[340px] items-center rounded-full bg-(--primary-dark-medium) p-[5px] 
                     overflow-hidden 
                     transition-all 
                     duration-500 

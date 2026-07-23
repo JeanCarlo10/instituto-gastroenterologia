@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import { Award, Building2, ShieldCheck, HeartHandshake } from "lucide-react";
+import { Building2 } from "lucide-react";
 import AboutImage from "@/assets/About01.jpg";
 
 const About = () => {
@@ -31,7 +31,7 @@ const About = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-8 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-(--gray-dark)"
+              className="mt-8 italic text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-(--gray-dark)"
             >
               Mais de
               <span className="text-(--primary)"> 20 anos </span>
@@ -96,52 +96,6 @@ const About = () => {
               formada por profissionais altamente qualificados e comprometidos
               com a saúde e o bem-estar dos pacientes.
             </motion.p>
-
-            <motion.div
-              variants={SlideUp(0.75)}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="mt-10 grid grid-cols-2 gap-5"
-            >
-              <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
-                  <Award size={26} className="text-(--primary)" />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-lg text-(--gray-dark)">Excelência Médica</h4>
-
-                  <p className="text-(--gray-medium)">Desde 2004</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
-                  <ShieldCheck size={26} className="text-(--primary)" />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-lg text-(--gray-dark)">Segurança</h4>
-
-                  <p className="text-(--gray-medium)">
-                    Protocolos atualizados
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="h-14 w-14 rounded-2xl bg-(--primary)/10 flex items-center justify-center">
-                  <HeartHandshake size={26} className="text-(--primary)" />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-lg text-(--gray-dark)">Atendimento</h4>
-
-                  <p className="text-(--gray-medium)">Humanizado</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
           <motion.div

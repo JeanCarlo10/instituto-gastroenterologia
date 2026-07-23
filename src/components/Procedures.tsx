@@ -81,7 +81,7 @@ const Procedures = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
+            className="italic mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-(--gray-medium)"
           >
             Tratamentos e exames de <br /> alta precisão
           </motion.h2>

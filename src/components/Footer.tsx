@@ -15,7 +15,7 @@ const PHONE_NUMBER = "(45)3572-0404";
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-[#063A34] pt-16 text-white">
+    <footer className="relative overflow-hidden bg-[#00534a] pt-16 text-white">
       <div className="absolute inset-0 overflow-hidden">
         <div
           className="
@@ -62,7 +62,7 @@ const Footer = () => {
                 alt="Logo clínica IGC"
                 loading="eager"
                 decoding="async"
-                className="h-auto w-[90px] md:w-[100px] lg:w-[105px]"
+                className="h-auto w-[70px]"
               />
             </a>
 
@@ -83,7 +83,7 @@ const Footer = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold">Navegação</h3>
+            <span className="text-lg font-semibold">Navegação</span>
 
             <nav className="mt-8 space-y-5">
               {[
@@ -121,7 +121,7 @@ const Footer = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold">Contato</h3>
+            <span className="text-lg font-semibold">Contato</span>
 
             <div className="mt-8 space-y-7">
               <a
@@ -170,7 +170,7 @@ const Footer = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold">Atendimento</h3>
+            <span className="text-lg font-semibold">Atendimento</span>
 
             <div className="mt-8 flex gap-4">
               <Clock3 size={18} className="mt-1 text-[#7BD6A9]" />
