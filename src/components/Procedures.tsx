@@ -111,17 +111,16 @@ const Procedures = () => {
           whileInView="animate"
           viewport={{
             once: true,
-            amount: 0.5,
           }}
           className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
-          {procedures.map((procedure) => {
+          {procedures.map((procedure, index) => {
             const Icon = procedure.icon;
 
             return (
               <motion.a
                 key={procedure.title}
-                variants={RevealCard()}
+                variants={RevealCard(index * 0.18)}
                 {...CardHover}
                 target="_blank"
                 rel="noopener noreferrer"

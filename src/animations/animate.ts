@@ -128,7 +128,7 @@ export const RevealCard = (delay = 0): Variants => ({
   initial: {
     opacity: 0,
     scale: 0.97,
-    y: 20,
+    y: 24,
     filter: "blur(8px)",
   },
 
