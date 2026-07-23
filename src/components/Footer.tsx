@@ -68,8 +68,7 @@ const Footer = () => {
                 alt="Logo clínica IGC"
                 loading="eager"
                 decoding="async"
-                width="150"
-                height="85"
+                className="h-auto w-[90px] md:w-[100px] lg:w-[105px]"
               />
             </a>
 

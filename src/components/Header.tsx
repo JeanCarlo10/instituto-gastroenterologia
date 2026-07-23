@@ -168,7 +168,7 @@ export default function Header() {
               alt="Logo clínica"
               loading="eager"
               decoding="async"
-              className="h-auto w-[220px] md:w-[280px] lg:w-[135px]"
+              className="h-auto w-[120px] md:w-[280px] lg:w-[135px]"
             />
           </a>
 

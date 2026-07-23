@@ -91,7 +91,7 @@ const Reviews = () => {
           "
         >
           {selected && (
-            <div className="p-14 md:p-20">
+            <div className="p-10 md:p-20">
               <Quote size={60} strokeWidth={1.5} className="text-(--primary)" />
 
               <blockquote
