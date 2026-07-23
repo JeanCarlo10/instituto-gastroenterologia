@@ -111,7 +111,6 @@ const Procedures = () => {
           whileInView="animate"
           viewport={{
             once: true,
-            amount: 0.5,
           }}
           className="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
