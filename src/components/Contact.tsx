@@ -72,31 +72,8 @@ const Contact = () => {
               viewport={{ once: true }}
               className="space-y-5"
             >
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                group
-                flex
-                items-center
-                gap-5
-                border-b
-                border-(--border)
-                pb-6
-              "
-              >
-                <div
-                  className="
-                  flex
-                  h-16
-                  w-16
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-(--primary)/12
-                "
-                >
+              <div className="group flex items-center gap-5 border-b border-(--border) pb-6">
+                <div className=" flex h-16 w-16 items-center justify-center rounded-2xl bg-(--primary)/12 ">
                   <FaWhatsapp size={28} className="text-(--primary)" />
                 </div>
 
@@ -155,7 +132,7 @@ const Contact = () => {
                     </span>
                   </a>
                 </div>
-              </a>
+              </div>
 
               {/* Telefone */}
 
@@ -235,8 +212,6 @@ const Contact = () => {
                   </p>
                 </div>
               </a>
-
-              
             </motion.div>
           </div>
 
@@ -271,8 +246,6 @@ const Contact = () => {
                 referrerPolicy="strict-origin-when-cross-origin"
               ></iframe>
             </div>
-
-            
           </motion.div>
         </div>
       </div>

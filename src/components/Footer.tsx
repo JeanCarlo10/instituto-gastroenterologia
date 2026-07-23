@@ -11,13 +11,7 @@ import {
   Instagram,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5545999999999";
-
-const WHATSAPP_TEXT = "Olá! Gostaria de agendar uma consulta.";
-
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  WHATSAPP_TEXT,
-)}`;
+const PHONE_NUMBER = "(45)3572-0404";
 
 const Footer = () => {
   return (
@@ -131,7 +125,7 @@ const Footer = () => {
 
             <div className="mt-8 space-y-7">
               <a
-                href={`tel:${WHATSAPP_NUMBER}`}
+                href={`tel:${PHONE_NUMBER}`}
                 className="group flex items-start gap-4"
               >
                 <Phone size={18} className="mt-1 text-[#7BD6A9]" />
