@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, ChevronsRight } from "lucide-react";
+import { ChevronsRight } from "lucide-react";
 import HeroImage from "@/assets/HeroAtual.png";
 
 const WHATSAPP_NUMBER = "45999999999";
@@ -32,7 +32,7 @@ const Hero = () => {
           alt="Instituto de Gastroenterologia"
           loading="eager"
           fetchPriority="high"
-          className=" absolute inset-0 h-full w-full object-cover object-[82%_center] lg:object-[90%_center] xl:object-[96%_center] 2xl:object-right pointer-events-none select-none"
+          className=" absolute inset-0 h-full w-full object-cover object-[98%_center] lg:object-[90%_center] xl:object-[96%_center] 2xl:object-right pointer-events-none select-none"
         />
       </div>
 
@@ -106,31 +106,8 @@ const Hero = () => {
       {/* CONTENT */}
       {/* ================================================= */}
 
-      <div className=" relative z-20 container mx-auto flex min-h-screen items-center px-6 pt-36 pb-24 lg:px-8 ">
-        <div className="w-full max-w-[760px]">
-          {/* Badge */}
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 18,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.7,
-            }}
-            className=" inline-flex items-center gap-3 rounded-full border border-(--primary)/20 bg-white/70 px-5 py-2 backdrop-blur-xl "
-          >
-            <Award size={18} className="text-(--primary)" />
-
-            <span className="text-sm font-medium text-(--foreground)">
-              Referência em Gastroenterologia desde 2004
-            </span>
-          </motion.div>
-
+      <div className="relative z-20 container mx-auto flex min-h-screen items-center justify-center px-6 pt-32 pb-20 lg:justify-start lg:px-8 ">
+        <div className=" w-full max-w-[760px] text-center md:text-left lg:text-left">
           <motion.h1
             initial={{
               opacity: 0,
@@ -144,7 +121,7 @@ const Hero = () => {
               delay: 0.15,
               duration: 0.9,
             }}
-            className=" mt-8 text-[46px] font-bold leading-[0.98] tracking-[-0.05em] text-[#083B35] sm:text-[62px] lg:text-[82px] "
+            className=" mt-8 text-[36px] font-bold leading-[0.98] tracking-[-0.05em] text-[#083B35] sm:text-[62px] lg:text-[82px] "
           >
             Especialistas em
             <span className="mt-2 block text-(--primary)">
@@ -166,7 +143,7 @@ const Hero = () => {
               delay: 0.3,
               duration: 0.9,
             }}
-            className="mt-10 max-w-[640px] text-lg leading-9 text-(--gray-dark) lg:text-xl"
+            className="mt-8 mx-auto max-w-[640px] text-lg leading-9 text-(--gray-dark) md:mx-0 lg:mx-0 lg:mt-10 lg:text-xl"
           >
             Há mais de 20 anos oferecendo diagnóstico preciso, tecnologia
             avançada e atendimento humanizado para o tratamento completo das
@@ -186,7 +163,7 @@ const Hero = () => {
               delay: 0.55,
               duration: 0.8,
             }}
-            className="mt-14 flex flex-col gap-5 sm:flex-row"
+            className="mt-12 flex justify-center sm:justify-center md:justify-start lg:justify-start"
           >
             <a
               href={WHATSAPP_LINK}
@@ -198,7 +175,7 @@ const Hero = () => {
                 Agendar consulta
               </span>
 
-              <span className=" ml-1 flex h-full w-[82px] items-center justify-center transition-all duration-500 group-hover:w-[95px] ">
+              <span className="ml-1 flex h-full w-[82px] items-center justify-center transition-all duration-500 group-hover:w-[95px] ">
                 <motion.div
                   animate={{
                     x: [0, 4, 0],
