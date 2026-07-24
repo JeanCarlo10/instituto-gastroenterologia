@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { ChevronsRight, Award } from "lucide-react";
-
-import HeroImage from "@/assets/NovaHero2.png";
+import { Award, ChevronsRight } from "lucide-react";
+import HeroVideo from "@/assets/Video_Hero.mp4";
 
 const WHATSAPP_NUMBER = "45999999999";
 
-const WHATSAPP_TEXT = "Olá! Gostaria de agendar uma consulta";
+const WHATSAPP_TEXT = "Olá! Gostaria de agendar uma consulta.";
 
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_TEXT,
@@ -13,15 +12,142 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 const Hero = () => {
   return (
-    <section id="home" className="relative overflow-hidden bg-white">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-[-200px] right-[-150px] w-[650px] h-[650px] rounded-full bg-(--primary)/10 blur-[140px]" />
+    <section
+      id="home"
+      className="
+      relative
+      isolate
+      min-h-screen
+      overflow-hidden
+      bg-white
+    "
+    >
+      {/* ================================================= */}
+      {/* VIDEO */}
+      {/* ================================================= */}
 
-        <div className="absolute bottom-[-250px] left-[-200px] w-[550px] h-[550px] rounded-full bg-(--primary)/5 blur-[150px]" />
+      <motion.video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        className="
+        absolute
+        inset-0
+        h-full
+        w-full
+        object-cover
+        object-right
+        pointer-events-none
+        scale-[1.02]
+      "
+        animate={{
+          scale: [1.02, 1.06, 1.02],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        <source src={HeroVideo} type="video/mp4" />
+      </motion.video>
+
+      {/* ================================================= */}
+      {/* OVERLAY */}
+      {/* ================================================= */}
+
+      <div className="absolute inset-0">
+        {/* branco */}
 
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="
+          absolute
+          inset-0
+
+          bg-gradient-to-r
+
+          from-white
+
+          via-white/82
+
+          via-[34%]
+
+          to-white/5
+
+          lg:to-transparent
+        "
+        />
+
+        {/* vinheta */}
+
+        <div
+          className="
+          absolute
+          inset-0
+
+          bg-gradient-to-t
+
+          from-white/5
+
+          via-transparent
+
+          to-transparent
+        "
+        />
+
+        {/* glow */}
+
+        <div
+          className="
+          absolute
+
+          -left-56
+
+          top-1/2
+
+          h-[720px]
+
+          w-[720px]
+
+          -translate-y-1/2
+
+          rounded-full
+
+          bg-(--primary)/10
+
+          blur-[180px]
+        "
+        />
+
+        {/* glow superior */}
+
+        <div
+          className="
+          absolute
+
+          right-20
+
+          top-16
+
+          h-[280px]
+
+          w-[280px]
+
+          rounded-full
+
+          bg-(--primary)/15
+
+          blur-[120px]
+        "
+        />
+
+        {/* textura */}
+
+        <div
+          className="absolute inset-0 opacity-[0.035]"
           style={{
             backgroundImage:
               "radial-gradient(circle,#0db26b 1px,transparent 1px)",
@@ -30,165 +156,282 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-8">
-        <div className="min-h-screen flex items-center py-24">
-          <div className="grid lg:grid-cols-12 gap-20 items-center w-full">
-            {/* LEFT */}
+      {/* ================================================= */}
+      {/* CONTENT */}
+      {/* ================================================= */}
 
-            <div className="lg:col-span-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                }}
-                className="inline-flex items-center gap-2 rounded-full border border-(--primary)/20 bg-(--primary)/5 px-5 py-2"
+      <div
+        className="
+        relative
+        z-20
+
+        container
+
+        mx-auto
+
+        flex
+
+        min-h-screen
+
+        items-center
+
+        px-6
+
+        pt-36
+
+        pb-24
+
+        lg:px-8
+      "
+      >
+        <div className="w-full max-w-[760px]">
+          {/* Badge */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 18,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            className="
+              inline-flex
+              items-center
+              gap-3
+              rounded-full
+              border
+              border-(--primary)/20
+              bg-white/70
+              px-5
+              py-2
+              backdrop-blur-xl
+            "
+          >
+            <Award size={18} className="text-(--primary)" />
+
+            <span className="text-sm font-medium text-(--foreground)">
+              Referência em Gastroenterologia desde 2004
+            </span>
+          </motion.div>
+
+          {/* ================================================= */}
+
+          <motion.h1
+            initial={{
+              opacity: 0,
+              y: 26,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.15,
+              duration: 0.9,
+            }}
+            className="
+              mt-8
+
+              text-[46px]
+
+              font-bold
+
+              leading-[0.98]
+
+              tracking-[-0.05em]
+
+              text-(--foreground)
+
+              sm:text-[62px]
+
+              lg:text-[82px]
+            "
+          >
+            Especialistas em
+            <span className="mt-2 block text-(--primary)">
+              Gastroenterologia
+            </span>
+            <span className="mt-2 block">e Cirurgia Digestiva</span>
+          </motion.h1>
+
+          {/* ================================================= */}
+
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 18,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.3,
+              duration: 0.9,
+            }}
+            className="
+              mt-10
+
+              max-w-[640px]
+
+              text-lg
+
+              leading-9
+
+              text-(--muted-foreground)
+
+              lg:text-xl
+            "
+          >
+            Há mais de 20 anos oferecendo diagnóstico preciso, tecnologia
+            avançada e atendimento humanizado para o tratamento completo das
+            doenças do aparelho digestivo.
+          </motion.p>
+
+          {/* ================================================= */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 24,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.55,
+              duration: 0.8,
+            }}
+            className="
+              mt-14
+
+              flex
+
+              flex-col
+
+              gap-5
+
+              sm:flex-row
+            "
+          >
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group
+
+                relative
+
+                flex
+
+                h-[72px]
+
+                w-full
+
+                max-w-[360px]
+
+                items-center
+
+                overflow-hidden
+
+                rounded-full
+
+                bg-(--primary-dark-medium)
+
+                p-[5px]
+
+                transition-[background-color,border-color,box-shadow,transform]
+
+                duration-[450ms]
+
+                ease-[cubic-bezier(0.22,1,0.36,1)]
+
+                hover:-translate-y-1
+
+                hover:shadow-[0_25px_60px_rgba(13,178,107,.20)]
+              "
+            >
+              <span
+                className="
+                  flex
+
+                  h-full
+
+                  flex-1
+
+                  items-center
+
+                  justify-center
+
+                  rounded-full
+
+                  bg-[#083B35]
+
+                  text-[22px]
+
+                  font-semibold
+
+                  text-(--primary-lighter)
+                "
               >
-                <Award size={18} className="text-(--primary)" />
+                Agendar consulta
+              </span>
 
-                <span className="text-sm font-medium text-(--foreground)">
-                  Referência em Gastroenterologia desde 2004
-                </span>
-              </motion.div>
+              <span
+                className="
+                  ml-1
 
-              <motion.h1
-                initial={{
-                  opacity: 0,
-                  y: 25,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  delay: 0.15,
-                  duration: 0.8,
-                }}
-                className="mt-8 text-5xl sm:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-[-2px]"
+                  flex
+
+                  h-full
+
+                  w-[82px]
+
+                  items-center
+
+                  justify-center
+
+                  transition-all
+
+                  duration-500
+
+                  group-hover:w-[95px]
+                "
               >
-                Especialistas em
-                <br />
-                <span className="text-(--primary)">Gastroenterologia</span>
-                <br />e Cirurgia Digestiva
-              </motion.h1>
-
-              <motion.p
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  delay: 0.3,
-                  duration: 0.8,
-                }}
-                className="mt-8 text-lg leading-9 text-(--muted-foreground) max-w-xl"
-              >
-                Há mais de 20 anos oferecendo diagnóstico preciso, tecnologia
-                avançada e atendimento humanizado para o tratamento completo das
-                doenças do aparelho digestivo.
-              </motion.p>
-
-              {/* BOTÕES */}
-
-              <motion.div
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.6,
-                  duration: 0.8,
-                  ease: "easeOut",
-                }}
-                className="mt-12 flex flex-col sm:flex-row gap-5"
-              >
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex h-[70px] w-[355px] items-center rounded-full bg-(--primary-dark-medium) p-[5px] 
-                    overflow-hidden 
-                    transition-all 
-                    duration-500 
-                    hover:-translate-y-1
-                    hover:scale-[1.02]
-                    hover:shadow-[0_20px_50px_rgba(13,178,107,.20)]
-                    active:scale-[0.98]"
+                <motion.div
+                  animate={{
+                    x: [0, 4, 0],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1.8,
+                    ease: "easeInOut",
+                  }}
                 >
-                  {/* Texto */}
-                  <span
-                    className="relative z-10 flex flex-1 h-full items-center justify-center rounded-full bg-[#083B35]
+                  <ChevronsRight
+                    size={30}
+                    strokeWidth={2.5}
+                    className="
                       text-(--primary-lighter)
-                      text-[22px]
-                      font-semibold
-                      tracking-[-0.02em]
-                      transition-all
-                      duration-500"
-                  >
-                    Agendar consulta
-                  </span>
 
-                  <span className="relative z-10 ml-1 flex h-full w-[82px] items-center justify-center rounded-full transition-all duration-500 group-hover:w-[95px]">
-                    <motion.div
-                      animate={{
-                        x: [0, 4, 0],
-                      }}
-                      transition={{
-                        repeat: Infinity,
-                        duration: 1.8,
-                        ease: "easeInOut",
-                      }}
-                      className="group-hover:animate-none"
-                    >
-                      <ChevronsRight
-                        size={30}
-                        strokeWidth={2.5}
-                        className="text-(--primary-lighter) transition-all duration-500 group-hover:translate-x-2"
-                      />
-                    </motion.div>
-                  </span>
-                </a>
-              </motion.div>
-            </div>
+                      transition-transform
 
-            {/* RIGHT */}
+                      duration-500
 
-            <div className="lg:col-span-6">
-              {/* <div className="relative flex justify-center"> */}
-              <div className="absolute inset-y-0 right-0 w-[58vw] overflow-hidden">
-                {/* Glow */}
-
-                <div className="absolute w-[620px] h-[620px] rounded-full bg-(--primary)/15 blur-[130px]" />
-
-                {/* Glow secundário */}
-
-                <div className="absolute top-24 right-12 w-[250px] h-[250px] rounded-full bg-(--primary)/20 blur-[90px]" />
-
-                {/* Card principal */}
-
-                <div
-                  // className="relative rounded-[38px] overflow-hidden bg-white shadow-[0_40px_90px_rgba(0,0,0,.10)] ring-1 ring-(--primary)/10"
-                  className="absolute inset-0"
-                >
-                  <img
-                    src={HeroImage}
-                    alt="Clínica IGC"
-                    className="absolute inset-0 h-full w-full object-cover object-left scale-110 blur-[1px]"
-                    // className="w-full max-w-[560px] object-cover"
-                    loading="eager"
-                    fetchPriority="high"
+                      group-hover:translate-x-2
+                    "
                   />
-
-                  {/* brilho */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/35 to-transparent" />
-
-                  {/* <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/40 pointer-events-none" /> */}
-                </div>
-              </div>
-            </div>
-          </div>
+                </motion.div>
+              </span>
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
