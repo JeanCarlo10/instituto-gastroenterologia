@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SlideUp } from "@/animations";
-import logoImage from "@/assets/Teste.png";
+import logoImage from "@/assets/Nova_Logo.png";
 
 import {
   ArrowUpRight,

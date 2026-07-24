@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import logoImage from "@/assets/IGC LOGO.avif";
+import logoImage from "@/assets/IGC_LOGO.avif";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
