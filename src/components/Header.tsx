@@ -227,27 +227,7 @@ export default function Header() {
                 duration: 0.3,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="
-      group
-
-      flex
-      items-center
-      gap-3
-
-      rounded-full
-
-      border
-      border-white/60
-
-      bg-white/55
-
-      px-5
-      py-3
-
-      backdrop-blur-2xl
-
-      shadow-[0_12px_35px_rgba(0,0,0,.08)]
-    "
+              className=" group flex items-center cursor-pointer gap-3 rounded-full border border-white/60 bg-white/55 px-5 py-3 backdrop-blur-2xl shadow-[0_12px_35px_rgba(0,0,0,.08)]"
             >
               {/* Texto */}
 
@@ -258,28 +238,14 @@ export default function Header() {
                 transition={{
                   duration: 0.35,
                 }}
-                className="
-        text-[13px]
-        font-semibold
-
-        uppercase
-
-        text-[#0B8F57]
-      "
+                className="text-[13px] font-semibold uppercase text-[#0B8F57]"
               >
                 Menu
               </motion.span>
 
               {/* Divisor */}
 
-              <span
-                className="
-        h-5
-        w-px
-
-        bg-[#0DB26B]/20
-      "
-              />
+              <span className="h-5 w-px bg-[#0DB26B]/20" />
 
               {/* Ícone */}
 
@@ -290,48 +256,20 @@ export default function Header() {
                 transition={{
                   duration: 0.3,
                 }}
-                className="
-        relative
-
-        flex
-
-        h-5
-        w-5
-
-        items-center
-        justify-center
-      "
+                className=" relative flex h-5 w-5 items-center justify-center"
               >
                 <motion.div
                   animate={{
-  rotate: 0,
-}}
-                  className="
-          absolute
-
-          h-[2px]
-          w-4
-
-          rounded-full
-
-          bg-[#0B8F57]
-        "
+                    rotate: 0,
+                  }}
+                  className=" absolute h-[2px] w-4 rounded-full bg-[#0B8F57]"
                 />
 
                 <motion.div
                   animate={{
-  rotate: 90,
-}}
-                  className="
-          absolute
-
-          h-[2px]
-          w-4
-
-          rounded-full
-
-          bg-[#0B8F57]
-        "
+                    rotate: 90,
+                  }}
+                  className=" absolute h-[2px] w-4 rounded-full bg-[#0B8F57]"
                 />
               </motion.div>
             </motion.button>
@@ -373,62 +311,11 @@ export default function Header() {
                 duration: 0.45,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="
-fixed
-
-left-5
-right-5
-
-top-5
-
-bottom-5
-
-z-[1000]
-
-flex
-flex-col
-
-overflow-hidden
-
-rounded-[34px]
-
-border
-border-white/50
-
-bg-white/82
-
-backdrop-blur-[28px]
-
-shadow-[0_35px_80px_rgba(0,0,0,.12)]
-"
+              className=" fixed left-5 right-5 top-5 bottom-5 z-[1000] flex flex-col overflow-hidden rounded-[34px] border border-white/50 bg-white/82 backdrop-blur-[28px] shadow-[0_35px_80px_rgba(0,0,0,.12)]"
             >
-              <div
-                className="
-    flex
-    items-center
-    justify-between
-
-    border-b
-
-    border-[#E8F4EF]
-
-    px-8
-
-    py-7
-  "
-              >
+              <div className=" flex items-center justify-between border-b border-[#E8F4EF] px-8 py-7">
                 <div className="flex items-center gap-4">
-                  <h2
-                    className="
-          mt-1
-
-          text-xl
-
-          font-semibold
-
-          text-[#083B35]
-        "
-                  >
+                  <h2 className=" mt-1 text-xl font-semibold text-[#083B35]">
                     Navegação
                   </h2>
                 </div>
@@ -441,21 +328,7 @@ shadow-[0_35px_80px_rgba(0,0,0,.12)]
                     scale: 0.9,
                   }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="
-        flex
-      cursor-pointer
-        h-11
-        w-11
-
-        items-center
-        justify-center
-
-        rounded-full
-
-        bg-[#F5FAF8]
-
-        text-[#0B8F57]
-      "
+                  className=" flex cursor-pointer h-11 w-11 items-center justify-center rounded-full bg-[#F5FAF8] text-[#0B8F57]"
                 >
                   <X size={22} />
                 </motion.button>
@@ -466,13 +339,7 @@ shadow-[0_35px_80px_rgba(0,0,0,.12)]
                 variants={containerVariants}
                 initial="hidden"
                 animate="show"
-                className="flex
-h-full
-flex-col
-justify-between
-px-8
-pt-20
-pb-8"
+                className="flex h-full flex-col justify-between px-8 pt-20 pb-8"
               >
                 <div>
                   {navItems.map((item) => {
@@ -487,34 +354,14 @@ pb-8"
                           e.preventDefault();
                           scrollToSection(item.id);
                         }}
-                        className={`
-group
-
-flex
-
-items-center
-justify-between
-
-rounded-2xl
-border
-
-border-transparent
-
-hover:border-[#DDF4EA]
-
-hover:shadow-[0_15px_35px_rgba(13,178,107,.08)]
-px-5
-py-4
-
-transition-all
-duration-300
-
-${
-  active
-    ? "bg-[#F7FCFA] text-[#0B8F57]"
-    : "hover:bg-[#F8FCFA] text-(--gray-dark)"
-}
-`}
+                        className={`group flex items-center justify-between rounded-2xl border border-transparent hover:border-[#DDF4EA] 
+                          hover:shadow-[0_15px_35px_rgba(13,178,107,.08)] px-5 py-4 transition-all duration-300
+                        ${
+                          active
+                            ? "bg-[#F7FCFA] text-[#0B8F57]"
+                            : "hover:bg-[#F8FCFA] text-(--gray-dark)"
+                        }
+                        `}
                       >
                         <div className="flex items-center gap-5">
                           <span className="transition-transform duration-300 group-hover:translate-x-3">
@@ -530,32 +377,7 @@ ${
                 <motion.div variants={itemVariants} className="pt-10">
                   <Button
                     asChild
-                    className="
-    h-[68px]
-
-    rounded-[22px]
-
-    bg-[#083B35]
-
-    text-white
-
-    text-base
-
-    font-semibold
-
-    shadow-[0_20px_45px_rgba(13,178,107,.18)]
-
-    transition-all
-    duration-500
-
-    hover:-translate-y-1
-
-    hover:bg-[#0B4C43]
-
-    hover:shadow-[0_30px_55px_rgba(13,178,107,.22)]
-  
-"
-                    // className="h-14 w-full cursor-pointer rounded-lg bg-(--primary) text-sm font-semibold uppercase tracking-[0.12em] text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_12px_30px_rgba(13,178,107,0.25)]"
+                    className="h-[68px] rounded-[22px] bg-[#083B35] text-white text-base font-semibold shadow-[0_20px_45px_rgba(13,178,107,.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#0B4C43] hover:shadow-[0_30px_55px_rgba(13,178,107,.22)]"
                   >
                     <a
                       href={WHATSAPP_LINK}

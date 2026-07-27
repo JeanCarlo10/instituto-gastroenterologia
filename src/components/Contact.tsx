@@ -59,9 +59,9 @@ const Contact = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="mt-8 mb-12 max-w-xl text-xl text-(--gray-dark)"
+              className="mt-8 mb-12 max-w-xl text-lg text-(--gray-dark)"
             >
-              Entre em contato conosco e nossa equipe <br /> terá o prazer em
+              Entre em contato conosco e nossa equipe terá o prazer em
               atender você.
             </motion.p>
 
