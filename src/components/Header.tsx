@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import logoImage from "@/assets/IGC_LOGO.avif";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import { X } from "lucide-react";
 
 const navItems = [
   { label: "Início", id: "home" },
@@ -216,20 +217,6 @@ export default function Header() {
             </LayoutGroup>
           )}
 
-          {/* {isMobile && (
-            <button
-              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-              aria-label="Abrir menu"
-            >
-              <div className="flex h-12 w-12 items-center justify-end">
-                <div className="flex flex-col gap-2 cursor-pointer">
-                  <motion.div className="h-[1.5px] w-8 bg-[#0B8F57]" />
-                  <motion.div className="h-[1.5px] w-6 bg-[#0B8F57]" />
-                  <motion.div className="h-[1.5px] w-8 bg-[#0B8F57]" />
-                </div>
-              </div>
-            </button>
-          )} */}
           {isMobile && (
             <motion.button
               aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -266,14 +253,13 @@ export default function Header() {
 
               <motion.span
                 animate={{
-                  letterSpacing: isMobileMenuOpen ? "0.22em" : "0.18em",
+                  letterSpacing: "0.18em",
                 }}
                 transition={{
                   duration: 0.35,
                 }}
                 className="
         text-[13px]
-
         font-semibold
 
         uppercase
@@ -281,7 +267,7 @@ export default function Header() {
         text-[#0B8F57]
       "
               >
-                {isMobileMenuOpen ? "Fechar" : "Menu"}
+                Menu
               </motion.span>
 
               {/* Divisor */}
@@ -298,11 +284,11 @@ export default function Header() {
               {/* Ícone */}
 
               <motion.div
-                animate={{
-                  rotate: isMobileMenuOpen ? 180 : 0,
+                whileHover={{
+                  rotate: 90,
                 }}
                 transition={{
-                  duration: 0.4,
+                  duration: 0.3,
                 }}
                 className="
         relative
@@ -317,15 +303,9 @@ export default function Header() {
       "
               >
                 <motion.div
-                  animate={
-                    isMobileMenuOpen
-                      ? {
-                          rotate: 45,
-                        }
-                      : {
-                          rotate: 0,
-                        }
-                  }
+                  animate={{
+  rotate: 0,
+}}
                   className="
           absolute
 
@@ -339,15 +319,9 @@ export default function Header() {
                 />
 
                 <motion.div
-                  animate={
-                    isMobileMenuOpen
-                      ? {
-                          rotate: -45,
-                        }
-                      : {
-                          rotate: 90,
-                        }
-                  }
+                  animate={{
+  rotate: 90,
+}}
                   className="
           absolute
 
@@ -370,7 +344,7 @@ export default function Header() {
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 z-[999] bg-[#062A26]/30 backdrop-blur-md"
+              className="fixed inset-0 z-[999] bg-[#062A26]/30 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -378,29 +352,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Menu */}
-            {/* <motion.nav
-              aria-label="Menu móvel"
-              className="fixed inset-0 z-[1000] flex h-dvh w-full flex-col bg-white px-8 pt-24 pb-8"
-              initial={{
-                y: "-100%",
-                scale: 0.98,
-              }}
-              animate={{
-                y: 0,
-                scale: 1,
-              }}
-              exit={{
-                y: "-100%",
-                scale: 0.98,
-              }}
-              transition={{
-                duration: 0.55,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-            > */}
             <motion.nav
-            
               aria-label="Menu móvel"
               initial={{
                 opacity: 0,
@@ -422,56 +374,76 @@ export default function Header() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               className="
-    fixed
+fixed
 
-    left-5
-    right-5
-    top-24
-    bottom-5
+left-5
+right-5
 
-    z-[1000]
+top-5
 
-    overflow-hidden
+bottom-5
 
-    rounded-[34px]
+z-[1000]
 
-    border
-    border-white/40
+flex
+flex-col
 
-    bg-white/75
+overflow-hidden
 
-    backdrop-blur-3xl
+rounded-[34px]
 
-    shadow-[0_40px_90px_rgba(0,0,0,.12)]
-  "
+border
+border-white/50
+
+bg-white/82
+
+backdrop-blur-[28px]
+
+shadow-[0_35px_80px_rgba(0,0,0,.12)]
+"
             >
-              
-              {/* Botão fechar */}
-              {/* <button
-                aria-label="Fechar menu"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="absolute top-6 right-6 cursor-pointer text-(--primary) transition-all duration-300 hover:rotate-90 hover:scale-110"
-              >
-                <X size={28} />
-              </button> */}
-              <motion.button
-                whileHover={{
-                  rotate: 90,
-                  scale: 1.08,
-                }}
-                whileTap={{
-                  scale: 0.92,
-                }}
-                aria-label="Fechar menu"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <div
                 className="
-        absolute
+    flex
+    items-center
+    justify-between
 
-        right-6
-        top-6
+    border-b
 
+    border-[#E8F4EF]
+
+    px-8
+
+    py-7
+  "
+              >
+                <div className="flex items-center gap-4">
+                  <h2
+                    className="
+          mt-1
+
+          text-xl
+
+          font-semibold
+
+          text-[#083B35]
+        "
+                  >
+                    Navegação
+                  </h2>
+                </div>
+
+                <motion.button
+                  whileHover={{
+                    rotate: 90,
+                  }}
+                  whileTap={{
+                    scale: 0.9,
+                  }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="
         flex
-
+      cursor-pointer
         h-11
         w-11
 
@@ -480,13 +452,14 @@ export default function Header() {
 
         rounded-full
 
-        bg-[#F4FAF8]
+        bg-[#F5FAF8]
 
         text-[#0B8F57]
-
-        shadow-sm
-    "
-              ></motion.button>
+      "
+                >
+                  <X size={22} />
+                </motion.button>
+              </div>
 
               {/* Navegação */}
               <motion.div
@@ -522,7 +495,7 @@ flex
 items-center
 justify-between
 
-rounded-[22px]
+rounded-2xl
 border
 
 border-transparent
@@ -531,22 +504,17 @@ hover:border-[#DDF4EA]
 
 hover:shadow-[0_15px_35px_rgba(13,178,107,.08)]
 px-5
-py-5
+py-4
 
 transition-all
 duration-300
 
 ${
   active
-    ? "bg-[#F4FBF8] text-[#0B8F57]"
-    : "hover:bg-[#F8FCFA] text-(--foreground)"
+    ? "bg-[#F7FCFA] text-[#0B8F57]"
+    : "hover:bg-[#F8FCFA] text-(--gray-dark)"
 }
 `}
-                        // className={`group flex items-center justify-between border-b border-(--primary-light) py-6 text-[2rem] font-light transition-all duration-300 ${
-                        //   active
-                        //     ? "text-(--primary)"
-                        //     : "text-(--foreground) hover:text-(--primary-dark)"
-                        // }`}
                       >
                         <div className="flex items-center gap-5">
                           <span className="transition-transform duration-300 group-hover:translate-x-3">
